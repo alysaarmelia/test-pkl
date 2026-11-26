@@ -1,0 +1,562 @@
+Resolving dependencies...
+Downloading packages...
+  _flutterfire_internals 1.3.68 (1.4.0 available)
+  archive 4.0.7 (4.7.1 available)
+  async 2.13.0 (2.13.1 available)
+  audioplayers 6.6.0 (6.8.1 available)
+  audioplayers_android 5.2.1 (5.3.0 available)
+  audioplayers_darwin 6.4.0 (6.5.0 available)
+  audioplayers_linux 4.2.1 (4.3.0 available)
+  audioplayers_platform_interface 7.1.1 (7.2.0 available)
+  audioplayers_web 5.2.0 (5.3.0 available)
+  audioplayers_windows 4.3.0 (4.4.1 available)
+  camera 0.11.2 (0.12.2 available)
+  camera_android_camerax 0.6.21 (0.7.6+2 available)
+  camera_avfoundation 0.9.21+2 (0.11.1 available)
+  camera_platform_interface 2.10.0 (2.15.1 available)
+  camera_web 0.3.5 (0.3.6 available)
+  cel 0.5.3 (0.6.1 available)
+  characters 1.4.0 (1.4.1 available)
+  cli_util 0.4.2 (0.6.1 available)
+  clock 1.1.2 (1.1.3 available)
+  cloud_firestore 6.0.0 (7.2.0 available)
+  cloud_firestore_platform_interface 7.0.0 (8.2.0 available)
+  cloud_firestore_web 5.0.0 (5.9.0 available)
+  connectivity_plus 6.1.5 (7.3.2 available)
+  connectivity_plus_platform_interface 2.0.1 (2.1.0 available)
+  cross_file 0.3.4+2 (0.4.0 available)
+  crypto 3.0.6 (3.0.8 available)
+  cupertino_icons 1.0.8 (2.0.0 available)
+  dbus 0.7.11 (0.8.1 available)
+  dio 5.9.0 (5.11.1 available)
+  dio_web_adapter 2.1.1 (2.2.2 available)
+  emoji_picker_flutter 2.1.1 (4.5.4 available)
+  equatable 2.0.7 (3.0.0 available)
+  face_verification 0.0.5 (0.3.9 available)
+  fake_cloud_firestore 4.0.0 (4.5.0 available)
+  fake_firebase_security_rules 0.5.3 (0.6.0 available)
+  ffi 2.1.4 (2.2.0 available)
+  file_selector_linux 0.9.3+2 (0.9.4+1 available)
+  file_selector_macos 0.9.4+3 (0.9.5+2 available)
+  file_selector_platform_interface 2.6.2 (2.7.0 available)
+  file_selector_windows 0.9.3+4 (0.9.3+6 available)
+  firebase_app_check 0.4.2 (0.5.2 available)
+  firebase_app_check_platform_interface 0.2.2 (0.5.2+4 available)
+  firebase_app_check_web 0.2.3 (0.3.2+4 available)
+  firebase_auth 6.0.1 (7.1.0 available)
+  firebase_auth_platform_interface 8.1.0 (9.2.0 available)
+  firebase_auth_web 6.0.1 (6.4.0 available)
+  firebase_core 4.6.0 (5.2.0 available)
+  firebase_core_platform_interface 6.0.3 (8.2.0 available)
+  firebase_core_web 3.5.1 (4.2.0 available)
+  firebase_messaging 16.0.3 (17.1.0 available)
+  firebase_messaging_platform_interface 4.7.3 (4.12.0 available)
+  firebase_messaging_web 4.0.3 (4.4.0 available)
+  firebase_storage 13.0.0 (14.1.0 available)
+  firebase_storage_platform_interface 5.2.11 (6.1.0 available)
+  firebase_storage_web 3.10.18 (3.12.0 available)
+  flutter_dotenv 5.2.1 (6.0.2 available)
+  flutter_launcher_icons 0.13.1 (0.14.4 available)
+  flutter_local_notifications 17.2.4 (23.0.4 available)
+  flutter_local_notifications_linux 4.0.1 (9.0.0 available)
+  flutter_local_notifications_platform_interface 7.2.0 (13.0.0 available)
+  flutter_map 6.2.1 (8.3.2 available)
+  flutter_map_cancellable_tile_provider 2.0.0 (discontinued replaced by flutter_map)
+  flutter_plugin_android_lifecycle 2.0.29 (2.0.35 available)
+  flutter_secure_storage 9.2.4 (11.2.0 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.3 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.1.1 available)
+  flutter_secure_storage_web 1.2.1 (2.1.1 available)
+  flutter_secure_storage_windows 3.1.2 (4.2.2 available)
+  gal 2.3.2 (3.0.1 available)
+  geolocator 10.1.1 (14.1.2 available)
+  geolocator_android 4.6.2 (5.2.1 available)
+  geolocator_apple 2.3.13 (2.4.3 available)
+  geolocator_platform_interface 4.2.6 (4.4.1 available)
+  geolocator_web 2.2.1 (4.1.4 available)
+  get 4.7.2 (4.7.3 available)
+  google_maps 8.1.1 (8.3.0 available)
+  google_maps_flutter 2.12.3 (2.19.0 available)
+  google_maps_flutter_android 2.18.1 (2.21.0 available)
+  google_maps_flutter_ios 2.15.5 (2.18.7 available)
+  google_maps_flutter_platform_interface 2.13.0 (2.18.0 available)
+  google_maps_flutter_web 0.5.12+2 (0.6.5 available)
+  google_mlkit_commons 0.11.0 (1.0.3 available)
+  google_mlkit_face_detection 0.13.1 (1.0.3 available)
+  html 0.15.6 (0.15.7 available)
+  http 1.5.0 (1.6.0 available)
+  image 4.5.4 (4.13.1 available)
+  image_cropper 9.1.0 (14.0.0 available)
+  image_cropper_for_web 6.1.0 (8.0.1 available)
+  image_cropper_platform_interface 7.1.0 (9.0.0 available)
+  image_picker 1.1.2 (1.2.4 available)
+  image_picker_android 0.8.12+25 (0.8.13+25 available)
+  image_picker_for_web 3.0.6 (3.1.1 available)
+  image_picker_ios 0.8.12+2 (0.8.13+16 available)
+  image_picker_linux 0.2.1+2 (0.2.2 available)
+  image_picker_macos 0.2.1+2 (0.2.2+1 available)
+  image_picker_platform_interface 2.11.0 (2.11.2 available)
+  image_picker_windows 0.2.1+1 (0.2.2 available)
+  intl 0.20.2 (0.20.3 available)
+  js 0.6.7 (0.7.2 available)
+  json_annotation 4.9.0 (4.12.0 available)
+  latlong2 0.9.1 (0.10.1 available)
+  leak_tracker 11.0.1 (11.0.2 available)
+  lints 6.0.0 (6.1.0 available)
+  local_auth 2.3.0 (3.0.2 available)
+  local_auth_android 1.0.56 (2.3.0 available)
+  local_auth_darwin 1.6.1 (2.0.5 available)
+  local_auth_windows 1.0.11 (2.0.2 available)
+  logger 2.6.1 (2.8.0 available)
+  matcher 0.12.17 (0.12.20 available)
+  material_color_utilities 0.11.1 (0.13.1 available)
+  meta 1.16.0 (1.19.0 available)
+  mgrs_dart 2.0.0 (3.0.0 available)
+  mime 2.0.0 (2.1.0 available)
+  mocktail 1.0.4 (1.0.5 available)
+  more 4.6.1 (4.10.0 available)
+  nm 0.5.0 (0.6.0 available)
+  open_filex 4.7.0 (5.0.0 available)
+  path_provider 2.1.5 (2.1.6 available)
+  path_provider_android 2.2.17 (2.3.1 available)
+  path_provider_foundation 2.4.2 (2.6.0 available)
+  path_provider_linux 2.2.1 (2.2.2 available)
+  path_provider_platform_interface 2.1.2 (2.1.3 available)
+  pdf 3.11.3 (3.13.1 available)
+  permission_handler 11.4.0 (13.0.2 available)
+  permission_handler_android 12.1.0 (14.1.1 available)
+  permission_handler_apple 9.4.7 (9.6.5 available)
+  permission_handler_html 0.1.3+5 (0.1.4+1 available)
+  permission_handler_platform_interface 4.3.0 (4.4.1 available)
+  permission_handler_windows 0.2.1 (0.2.4 available)
+  petitparser 6.1.0 (7.1.0 available)
+  platform 3.1.6 (3.2.0 available)
+  posix 6.0.3 (6.5.4 available)
+  proj4dart 2.1.0 (3.0.0 available)
+  qr 3.0.2 (4.0.1 available)
+  rx 0.4.0 (0.5.0 available)
+  sanitize_html 2.1.0 (2.2.0 available)
+  shared_preferences 2.5.3 (2.5.6 available)
+  shared_preferences_android 2.4.11 (2.5.5 available)
+  shared_preferences_foundation 2.5.4 (2.6.2 available)
+  shared_preferences_platform_interface 2.4.1 (2.4.2 available)
+  shimmer 3.0.0 (4.0.0 available)
+  skeletonizer 2.1.0+1 (3.0.0 available)
+  source_span 1.10.1 (1.10.2 available)
+  sqflite 2.4.2 (2.4.6 available)
+  sqflite_android 2.4.2+2 (2.4.6 available)
+  sqflite_common 2.5.6 (2.5.17 available)
+  sqflite_darwin 2.4.2 (2.4.6 available)
+  sqflite_platform_interface 2.4.0 (2.4.4 available)
+  stack_trace 1.12.1 (1.12.2 available)
+  stream_transform 2.1.1 (2.1.2 available)
+  syncfusion_flutter_charts 31.2.2 (35.2.13 available)
+  syncfusion_flutter_core 31.2.2 (35.2.13 available)
+  synchronized 3.4.0 (3.6.1+1 available)
+  table_calendar 3.2.0 (3.3.0 available)
+  test_api 0.7.6 (0.7.15 available)
+  tflite_flutter 0.11.0 (0.12.1 available)
+  timezone 0.9.4 (0.11.2 available)
+  unicode 0.3.1 (1.1.9 available)
+  url_launcher 6.3.2 (6.3.3 available)
+  url_launcher_android 6.3.17 (6.3.35 available)
+  url_launcher_ios 6.3.3 (6.4.2 available)
+  url_launcher_linux 3.2.1 (3.2.3 available)
+  url_launcher_macos 3.2.2 (3.2.6 available)
+  url_launcher_web 2.4.1 (2.4.3 available)
+  url_launcher_windows 3.1.4 (3.1.6 available)
+  uuid 4.5.1 (4.6.0 available)
+  vector_math 2.2.0 (2.4.4 available)
+  vm_service 15.0.2 (15.4.0 available)
+  web 1.1.1 (1.1.2 available)
+  win32 5.14.0 (6.4.0 available)
+  xml 6.5.0 (7.1.0 available)
+  yaml 3.1.3 (3.1.4 available)
+Got dependencies!
+1 package is discontinued.
+173 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+{"protocolVersion":"0.1.1","runnerVersion":null,"pid":2499,"type":"start","time":0}
+{"suite":{"id":0,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/material_request_repository_test.dart"},"type":"suite","time":0}
+{"test":{"id":1,"name":"loading /home/runner/work/test-pkl/test-pkl/test/material_request_repository_test.dart","suiteID":0,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":0}
+{"suite":{"id":2,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/news_service_test.dart"},"type":"suite","time":3}
+{"test":{"id":3,"name":"loading /home/runner/work/test-pkl/test-pkl/test/news_service_test.dart","suiteID":2,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":3}
+{"count":28,"time":5,"type":"allSuites"}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":1,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":6527}
+{"group":{"id":4,"suiteID":0,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":2,"line":null,"column":null,"url":null},"type":"group","time":6529}
+{"test":{"id":5,"name":"(setUpAll)","suiteID":0,"groupIDs":[4],"metadata":{"skip":false,"skipReason":null},"line":11,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/material_request_repository_test.dart"},"type":"testStart","time":6530}
+{"testID":5,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":6617}
+{"test":{"id":6,"name":"watchRequestsByRequester mengurutkan terbaru dahulu","suiteID":0,"groupIDs":[4],"metadata":{"skip":false,"skipReason":null},"line":36,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/material_request_repository_test.dart"},"type":"testStart","time":6618}
+{"testID":6,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":6739}
+{"test":{"id":7,"name":"markDelivered memperbarui status dan receiver info","suiteID":0,"groupIDs":[4],"metadata":{"skip":false,"skipReason":null},"line":74,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/material_request_repository_test.dart"},"type":"testStart","time":6740}
+{"testID":7,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":6746}
+{"test":{"id":8,"name":"(tearDownAll)","suiteID":0,"groupIDs":[4],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":6746}
+{"testID":8,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":6748}
+{"suite":{"id":9,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/media_docs_page_test.dart"},"type":"suite","time":6783}
+{"test":{"id":10,"name":"loading /home/runner/work/test-pkl/test-pkl/test/media_docs_page_test.dart","suiteID":9,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":6783}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":3,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":7125}
+{"group":{"id":11,"suiteID":2,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":1,"line":null,"column":null,"url":null},"type":"group","time":7125}
+{"test":{"id":12,"name":"getOriginalImageUrl menghapus query ukuran dan mengubah path thumbnail","suiteID":2,"groupIDs":[11],"metadata":{"skip":false,"skipReason":null},"line":5,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/news_service_test.dart"},"type":"testStart","time":7126}
+{"testID":12,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":7149}
+{"suite":{"id":13,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/calendar_event_repository_test.dart"},"type":"suite","time":7159}
+{"test":{"id":14,"name":"loading /home/runner/work/test-pkl/test-pkl/test/calendar_event_repository_test.dart","suiteID":13,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":7159}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":10,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":8090}
+{"group":{"id":15,"suiteID":9,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":1,"line":null,"column":null,"url":null},"type":"group","time":8090}
+{"test":{"id":16,"name":"(setUpAll)","suiteID":9,"groupIDs":[15],"metadata":{"skip":false,"skipReason":null},"line":11,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/media_docs_page_test.dart"},"type":"testStart","time":8090}
+{"testID":16,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":8118}
+{"test":{"id":17,"name":"menampilkan dokumen pada tab Dokumen","suiteID":9,"groupIDs":[15],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":15,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/media_docs_page_test.dart"},"type":"testStart","time":8120}
+{"testID":14,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":8359}
+{"group":{"id":18,"suiteID":13,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":2,"line":null,"column":null,"url":null},"type":"group","time":8359}
+{"test":{"id":19,"name":"(setUpAll)","suiteID":13,"groupIDs":[18],"metadata":{"skip":false,"skipReason":null},"line":10,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/calendar_event_repository_test.dart"},"type":"testStart","time":8359}
+{"testID":19,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":8432}
+{"test":{"id":20,"name":"fetchEvents memfilter by range dan sort ascending","suiteID":13,"groupIDs":[18],"metadata":{"skip":false,"skipReason":null},"line":14,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/calendar_event_repository_test.dart"},"type":"testStart","time":8432}
+{"testID":20,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":8518}
+{"test":{"id":21,"name":"fetchEventById mengembalikan null jika tidak ada","suiteID":13,"groupIDs":[18],"metadata":{"skip":false,"skipReason":null},"line":42,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/calendar_event_repository_test.dart"},"type":"testStart","time":8518}
+{"testID":21,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":8522}
+{"test":{"id":22,"name":"(tearDownAll)","suiteID":13,"groupIDs":[18],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":8522}
+{"testID":22,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":8524}
+{"suite":{"id":23,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/material_request_tracking_page_test.dart"},"type":"suite","time":8534}
+{"test":{"id":24,"name":"loading /home/runner/work/test-pkl/test-pkl/test/material_request_tracking_page_test.dart","suiteID":23,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":8534}
+{"testID":17,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":8989}
+{"test":{"id":25,"name":"(tearDownAll)","suiteID":9,"groupIDs":[15],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":8990}
+{"testID":25,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":8997}
+{"suite":{"id":26,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/widget_test.dart"},"type":"suite","time":9011}
+{"test":{"id":27,"name":"loading /home/runner/work/test-pkl/test-pkl/test/widget_test.dart","suiteID":26,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":9011}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":24,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":9350}
+{"group":{"id":28,"suiteID":23,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":2,"line":null,"column":null,"url":null},"type":"group","time":9351}
+{"test":{"id":29,"name":"menampilkan pesan login saat user null","suiteID":23,"groupIDs":[28],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":18,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/material_request_tracking_page_test.dart"},"type":"testStart","time":9351}
+{"testID":27,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":9611}
+{"group":{"id":30,"suiteID":26,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":1,"line":null,"column":null,"url":null},"type":"group","time":9611}
+{"test":{"id":31,"name":"firebase setup helper initializes default app","suiteID":26,"groupIDs":[30],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":7,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/widget_test.dart"},"type":"testStart","time":9611}
+{"testID":31,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":9782}
+{"suite":{"id":32,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/attendance_window_repository_test.dart"},"type":"suite","time":9793}
+{"test":{"id":33,"name":"loading /home/runner/work/test-pkl/test-pkl/test/attendance_window_repository_test.dart","suiteID":32,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":9793}
+{"testID":29,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":9832}
+{"test":{"id":34,"name":"menampilkan empty state saat tidak ada permintaan","suiteID":23,"groupIDs":[28],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":46,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/material_request_tracking_page_test.dart"},"type":"testStart","time":9833}
+{"testID":34,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":9898}
+{"suite":{"id":35,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/chat_list_page_test.dart"},"type":"suite","time":9912}
+{"test":{"id":36,"name":"loading /home/runner/work/test-pkl/test-pkl/test/chat_list_page_test.dart","suiteID":35,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":9912}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":33,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":10483}
+{"group":{"id":37,"suiteID":32,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":4,"line":null,"column":null,"url":null},"type":"group","time":10483}
+{"test":{"id":38,"name":"(setUpAll)","suiteID":32,"groupIDs":[37],"metadata":{"skip":false,"skipReason":null},"line":10,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/attendance_window_repository_test.dart"},"type":"testStart","time":10483}
+{"testID":38,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":10551}
+{"test":{"id":39,"name":"setWindow + fetchWindow menyimpan jadwal absensi","suiteID":32,"groupIDs":[37],"metadata":{"skip":false,"skipReason":null},"line":14,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/attendance_window_repository_test.dart"},"type":"testStart","time":10552}
+{"testID":39,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":10648}
+{"test":{"id":40,"name":"watchWindow memetakan snapshot menjadi AttendanceWindow","suiteID":32,"groupIDs":[37],"metadata":{"skip":false,"skipReason":null},"line":36,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/attendance_window_repository_test.dart"},"type":"testStart","time":10649}
+{"testID":40,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":10658}
+{"test":{"id":41,"name":"updateTimes memperbarui jam buka/tutup dan grace period","suiteID":32,"groupIDs":[37],"metadata":{"skip":false,"skipReason":null},"line":63,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/attendance_window_repository_test.dart"},"type":"testStart","time":10658}
+{"testID":41,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":10662}
+{"test":{"id":42,"name":"model AttendanceWindow isWithinWindow/isLate bekerja sesuai jadwal","suiteID":32,"groupIDs":[37],"metadata":{"skip":false,"skipReason":null},"line":96,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/attendance_window_repository_test.dart"},"type":"testStart","time":10663}
+{"testID":42,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":10665}
+{"test":{"id":43,"name":"(tearDownAll)","suiteID":32,"groupIDs":[37],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":10665}
+{"testID":43,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":10667}
+{"suite":{"id":44,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/auth_flow_repository_test.dart"},"type":"suite","time":10690}
+{"test":{"id":45,"name":"loading /home/runner/work/test-pkl/test-pkl/test/auth_flow_repository_test.dart","suiteID":44,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":10690}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":36,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":14916}
+{"group":{"id":46,"suiteID":35,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":3,"line":null,"column":null,"url":null},"type":"group","time":14917}
+{"test":{"id":47,"name":"(setUpAll)","suiteID":35,"groupIDs":[46],"metadata":{"skip":false,"skipReason":null},"line":13,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/chat_list_page_test.dart"},"type":"testStart","time":14917}
+{"testID":47,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":14941}
+{"test":{"id":48,"name":"menampilkan pesan login jika user null","suiteID":35,"groupIDs":[46],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":17,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/chat_list_page_test.dart"},"type":"testStart","time":14941}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":45,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":15249}
+{"group":{"id":49,"suiteID":44,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":4,"line":null,"column":null,"url":null},"type":"group","time":15249}
+{"test":{"id":50,"name":"shouldAutoLogin true jika user ada dan session aktif","suiteID":44,"groupIDs":[49],"metadata":{"skip":false,"skipReason":null},"line":24,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/auth_flow_repository_test.dart"},"type":"testStart","time":15249}
+{"testID":50,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":15345}
+{"test":{"id":51,"name":"shouldAutoLogin false jika session expired dan user di-signout","suiteID":44,"groupIDs":[49],"metadata":{"skip":false,"skipReason":null},"line":42,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/auth_flow_repository_test.dart"},"type":"testStart","time":15346}
+{"testID":51,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":15349}
+{"test":{"id":52,"name":"resolveFriendlyName prioritas displayName","suiteID":44,"groupIDs":[49],"metadata":{"skip":false,"skipReason":null},"line":63,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/auth_flow_repository_test.dart"},"type":"testStart","time":15349}
+{"testID":52,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":15352}
+{"test":{"id":53,"name":"resolveFriendlyName fallback ke users.name di firestore","suiteID":44,"groupIDs":[49],"metadata":{"skip":false,"skipReason":null},"line":78,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/auth_flow_repository_test.dart"},"type":"testStart","time":15352}
+{"testID":53,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":15365}
+{"suite":{"id":54,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/attendance_history_page_test.dart"},"type":"suite","time":15378}
+{"test":{"id":55,"name":"loading /home/runner/work/test-pkl/test-pkl/test/attendance_history_page_test.dart","suiteID":54,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":15378}
+{"testID":48,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":15648}
+{"test":{"id":56,"name":"menampilkan empty state ketika tidak ada chat","suiteID":35,"groupIDs":[46],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":34,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/chat_list_page_test.dart"},"type":"testStart","time":15648}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":55,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":16006}
+{"group":{"id":57,"suiteID":54,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":1,"line":null,"column":null,"url":null},"type":"group","time":16007}
+{"test":{"id":58,"name":"menampilkan empty state ketika tidak ada riwayat absen/cuti/izin","suiteID":54,"groupIDs":[57],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":22,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/attendance_history_page_test.dart"},"type":"testStart","time":16007}
+{"testID":58,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":16623}
+{"suite":{"id":59,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/auth_view_test.dart"},"type":"suite","time":16637}
+{"test":{"id":60,"name":"loading /home/runner/work/test-pkl/test-pkl/test/auth_view_test.dart","suiteID":59,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":16637}
+{"testID":56,"messageType":"print","message":"══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════\nThe following assertion was thrown running a test:\npumpAndSettle timed out\n\nWhen the exception was thrown, this was the stack:\n#0      WidgetTester.pumpAndSettle.<anonymous closure> (package:flutter_test/src/widget_tester.dart:717:11)\n<asynchronous suspension>\n#1      TestAsyncUtils.guard.<anonymous closure> (package:flutter_test/src/test_async_utils.dart:130:27)\n<asynchronous suspension>\n#2      main.<anonymous closure> (file:///home/runner/work/test-pkl/test-pkl/test/chat_list_page_test.dart:48:5)\n<asynchronous suspension>\n#3      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)\n<asynchronous suspension>\n#4      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)\n<asynchronous suspension>\n<asynchronous suspension>\n(elided one frame from package:stack_trace)\n\nThe test description was:\n  menampilkan empty state ketika tidak ada chat\n════════════════════════════════════════════════════════════════════════════════════════════════════","type":"print","time":18319}
+{"testID":56,"error":"Test failed. See exception logs above.\nThe test description was: menampilkan empty state ketika tidak ada chat","stackTrace":"","isFailure":false,"type":"error","time":18322}
+{"testID":56,"result":"error","skipped":false,"hidden":false,"type":"testDone","time":18322}
+{"test":{"id":61,"name":"menampilkan item chat dari firestore","suiteID":35,"groupIDs":[46],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":53,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/chat_list_page_test.dart"},"type":"testStart","time":18322}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":60,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":20137}
+{"group":{"id":62,"suiteID":59,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":3,"line":null,"column":null,"url":null},"type":"group","time":20137}
+{"test":{"id":63,"name":"(setUpAll)","suiteID":59,"groupIDs":[62],"metadata":{"skip":false,"skipReason":null},"line":11,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/auth_view_test.dart"},"type":"testStart","time":20137}
+{"testID":63,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":20167}
+{"test":{"id":64,"name":"AuthView berpindah Login -> Signup -> Login","suiteID":59,"groupIDs":[62],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":15,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/auth_view_test.dart"},"type":"testStart","time":20167}
+{"testID":64,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":20998}
+{"test":{"id":65,"name":"LoginView menolak email/password kosong","suiteID":59,"groupIDs":[62],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":37,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/auth_view_test.dart"},"type":"testStart","time":20998}
+{"testID":65,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":21109}
+{"test":{"id":66,"name":"SignupView menolak input kosong","suiteID":59,"groupIDs":[62],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":60,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/auth_view_test.dart"},"type":"testStart","time":21109}
+{"testID":61,"messageType":"print","message":"══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════\nThe following assertion was thrown running a test:\npumpAndSettle timed out\n\nWhen the exception was thrown, this was the stack:\n#0      WidgetTester.pumpAndSettle.<anonymous closure> (package:flutter_test/src/widget_tester.dart:717:11)\n<asynchronous suspension>\n#1      TestAsyncUtils.guard.<anonymous closure> (package:flutter_test/src/test_async_utils.dart:130:27)\n<asynchronous suspension>\n#2      main.<anonymous closure> (file:///home/runner/work/test-pkl/test-pkl/test/chat_list_page_test.dart:78:5)\n<asynchronous suspension>\n#3      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)\n<asynchronous suspension>\n#4      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)\n<asynchronous suspension>\n<asynchronous suspension>\n(elided one frame from package:stack_trace)\n\nThe test description was:\n  menampilkan item chat dari firestore\n════════════════════════════════════════════════════════════════════════════════════════════════════","type":"print","time":21149}
+{"testID":61,"error":"Test failed. See exception logs above.\nThe test description was: menampilkan item chat dari firestore","stackTrace":"","isFailure":false,"type":"error","time":21150}
+{"testID":61,"result":"error","skipped":false,"hidden":false,"type":"testDone","time":21151}
+{"test":{"id":67,"name":"(tearDownAll)","suiteID":35,"groupIDs":[46],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":21151}
+{"testID":67,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":21155}
+{"suite":{"id":68,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/settings_page_test.dart"},"type":"suite","time":21186}
+{"test":{"id":69,"name":"loading /home/runner/work/test-pkl/test-pkl/test/settings_page_test.dart","suiteID":68,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":21186}
+{"testID":66,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":21200}
+{"test":{"id":70,"name":"(tearDownAll)","suiteID":59,"groupIDs":[62],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":21200}
+{"testID":70,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":21204}
+{"suite":{"id":71,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/attendance_history_test.dart"},"type":"suite","time":21229}
+{"test":{"id":72,"name":"loading /home/runner/work/test-pkl/test-pkl/test/attendance_history_test.dart","suiteID":71,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":21229}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":69,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":22608}
+{"group":{"id":73,"suiteID":68,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":3,"line":null,"column":null,"url":null},"type":"group","time":22608}
+{"test":{"id":74,"name":"(setUpAll)","suiteID":68,"groupIDs":[73],"metadata":{"skip":false,"skipReason":null},"line":14,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/settings_page_test.dart"},"type":"testStart","time":22608}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":74,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":22632}
+{"test":{"id":75,"name":"menampilkan profil guest ketika belum login","suiteID":68,"groupIDs":[73],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":18,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/settings_page_test.dart"},"type":"testStart","time":22633}
+{"testID":72,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":22968}
+{"group":{"id":76,"suiteID":71,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":2,"line":null,"column":null,"url":null},"type":"group","time":22968}
+{"test":{"id":77,"name":"AttendanceRecord toJson/fromJson roundtrip","suiteID":71,"groupIDs":[76],"metadata":{"skip":false,"skipReason":null},"line":15,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/attendance_history_test.dart"},"type":"testStart","time":22970}
+{"testID":77,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":23021}
+{"test":{"id":78,"name":"AttendanceHistory save/load/merge per hari","suiteID":71,"groupIDs":[76],"metadata":{"skip":false,"skipReason":null},"line":38,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/attendance_history_test.dart"},"type":"testStart","time":23021}
+{"testID":78,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":23029}
+{"suite":{"id":79,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/login_controller_test.dart"},"type":"suite","time":23040}
+{"test":{"id":80,"name":"loading /home/runner/work/test-pkl/test-pkl/test/login_controller_test.dart","suiteID":79,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":23040}
+{"testID":75,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":23244}
+{"test":{"id":81,"name":"menampilkan nama dan role dari firestore","suiteID":68,"groupIDs":[73],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":34,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/settings_page_test.dart"},"type":"testStart","time":23245}
+{"testID":81,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":23447}
+{"test":{"id":82,"name":"logout menampilkan dialog lalu memanggil signOut","suiteID":68,"groupIDs":[73],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":60,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/settings_page_test.dart"},"type":"testStart","time":23448}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":82,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":23741}
+{"test":{"id":83,"name":"(tearDownAll)","suiteID":68,"groupIDs":[73],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":23741}
+{"testID":83,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":23744}
+{"suite":{"id":84,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/user_profile_page_test.dart"},"type":"suite","time":23766}
+{"test":{"id":85,"name":"loading /home/runner/work/test-pkl/test-pkl/test/user_profile_page_test.dart","suiteID":84,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":23766}
+{"testID":80,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":24020}
+{"group":{"id":86,"suiteID":79,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":5,"line":null,"column":null,"url":null},"type":"group","time":24021}
+{"test":{"id":87,"name":"login tidak memanggil repository saat input kosong","suiteID":79,"groupIDs":[86],"metadata":{"skip":false,"skipReason":null},"line":88,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/login_controller_test.dart"},"type":"testStart","time":24021}
+{"testID":87,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":24040}
+{"test":{"id":88,"name":"login sukses ke /home jika profil lengkap","suiteID":79,"groupIDs":[86],"metadata":{"skip":false,"skipReason":null},"line":107,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/login_controller_test.dart"},"type":"testStart","time":24041}
+{"testID":88,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":24044}
+{"test":{"id":89,"name":"login sukses ke /complete-profile jika profil belum lengkap","suiteID":79,"groupIDs":[86],"metadata":{"skip":false,"skipReason":null},"line":128,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/login_controller_test.dart"},"type":"testStart","time":24044}
+{"testID":89,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":24046}
+{"test":{"id":90,"name":"login auth error tidak melakukan navigasi","suiteID":79,"groupIDs":[86],"metadata":{"skip":false,"skipReason":null},"line":146,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/login_controller_test.dart"},"type":"testStart","time":24046}
+{"testID":90,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":24048}
+{"test":{"id":91,"name":"isLoading true selama proses login berlangsung","suiteID":79,"groupIDs":[86],"metadata":{"skip":false,"skipReason":null},"line":166,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/login_controller_test.dart"},"type":"testStart","time":24048}
+{"testID":91,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":24082}
+{"suite":{"id":92,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/leave_request_repository_test.dart"},"type":"suite","time":24095}
+{"test":{"id":93,"name":"loading /home/runner/work/test-pkl/test-pkl/test/leave_request_repository_test.dart","suiteID":92,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":24095}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":85,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":24709}
+{"group":{"id":94,"suiteID":84,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":1,"line":null,"column":null,"url":null},"type":"group","time":24710}
+{"test":{"id":95,"name":"(setUpAll)","suiteID":84,"groupIDs":[94],"metadata":{"skip":false,"skipReason":null},"line":12,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/user_profile_page_test.dart"},"type":"testStart","time":24710}
+{"testID":95,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":24743}
+{"test":{"id":96,"name":"menampilkan nama dan PIN pengguna","suiteID":84,"groupIDs":[94],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":16,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/user_profile_page_test.dart"},"type":"testStart","time":24743}
+{"testID":93,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":25004}
+{"group":{"id":97,"suiteID":92,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":3,"line":null,"column":null,"url":null},"type":"group","time":25004}
+{"test":{"id":98,"name":"(setUpAll)","suiteID":92,"groupIDs":[97],"metadata":{"skip":false,"skipReason":null},"line":10,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/leave_request_repository_test.dart"},"type":"testStart","time":25004}
+{"testID":98,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":25087}
+{"test":{"id":99,"name":"submitLeave menyimpan kind cuti dan metadata span hari","suiteID":92,"groupIDs":[97],"metadata":{"skip":false,"skipReason":null},"line":14,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/leave_request_repository_test.dart"},"type":"testStart","time":25087}
+{"testID":99,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":25172}
+{"test":{"id":100,"name":"watchUserRequests mengurutkan createdAt desc","suiteID":92,"groupIDs":[97],"metadata":{"skip":false,"skipReason":null},"line":40,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/leave_request_repository_test.dart"},"type":"testStart","time":25172}
+{"testID":100,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":25191}
+{"test":{"id":101,"name":"updateStatus memperbarui status dan decision metadata","suiteID":92,"groupIDs":[97],"metadata":{"skip":false,"skipReason":null},"line":75,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/leave_request_repository_test.dart"},"type":"testStart","time":25192}
+{"testID":101,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":25197}
+{"test":{"id":102,"name":"(tearDownAll)","suiteID":92,"groupIDs":[97],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":25197}
+{"testID":102,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":25199}
+{"suite":{"id":103,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/home_controller_test.dart"},"type":"suite","time":25210}
+{"test":{"id":104,"name":"loading /home/runner/work/test-pkl/test-pkl/test/home_controller_test.dart","suiteID":103,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":25210}
+{"testID":96,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":25504}
+{"test":{"id":105,"name":"(tearDownAll)","suiteID":84,"groupIDs":[94],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":25505}
+{"testID":105,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":25511}
+{"suite":{"id":106,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/profile_page_test.dart"},"type":"suite","time":25534}
+{"test":{"id":107,"name":"loading /home/runner/work/test-pkl/test-pkl/test/profile_page_test.dart","suiteID":106,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":25534}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":104,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":26157}
+{"group":{"id":108,"suiteID":103,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":4,"line":null,"column":null,"url":null},"type":"group","time":26157}
+{"test":{"id":109,"name":"createEvent memakai uid user jika createdBy tidak diisi","suiteID":103,"groupIDs":[108],"metadata":{"skip":false,"skipReason":null},"line":63,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/home_controller_test.dart"},"type":"testStart","time":26157}
+{"testID":109,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":26182}
+{"test":{"id":110,"name":"createEvent mempertahankan createdBy bila dikirim manual","suiteID":103,"groupIDs":[108],"metadata":{"skip":false,"skipReason":null},"line":82,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/home_controller_test.dart"},"type":"testStart","time":26183}
+{"testID":110,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":26185}
+{"test":{"id":111,"name":"deleteEvent local hanya hapus dari list lokal","suiteID":103,"groupIDs":[108],"metadata":{"skip":false,"skipReason":null},"line":97,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/home_controller_test.dart"},"type":"testStart","time":26185}
+{"testID":111,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":26188}
+{"test":{"id":112,"name":"deleteEvent remote mendelegasikan ke repository","suiteID":103,"groupIDs":[108],"metadata":{"skip":false,"skipReason":null},"line":116,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/home_controller_test.dart"},"type":"testStart","time":26188}
+{"testID":112,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":26193}
+{"suite":{"id":113,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/upcoming_events_section_test.dart"},"type":"suite","time":26206}
+{"test":{"id":114,"name":"loading /home/runner/work/test-pkl/test-pkl/test/upcoming_events_section_test.dart","suiteID":113,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":26206}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":107,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":26716}
+{"group":{"id":115,"suiteID":106,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":3,"line":null,"column":null,"url":null},"type":"group","time":26716}
+{"test":{"id":116,"name":"(setUpAll)","suiteID":106,"groupIDs":[115],"metadata":{"skip":false,"skipReason":null},"line":12,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/profile_page_test.dart"},"type":"testStart","time":26716}
+{"testID":116,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":26736}
+{"test":{"id":117,"name":"menampilkan pesan ketika tidak ada user","suiteID":106,"groupIDs":[115],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":16,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/profile_page_test.dart"},"type":"testStart","time":26736}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":114,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":27194}
+{"group":{"id":118,"suiteID":113,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":2,"line":null,"column":null,"url":null},"type":"group","time":27194}
+{"test":{"id":119,"name":"(setUpAll)","suiteID":113,"groupIDs":[118],"metadata":{"skip":false,"skipReason":null},"line":31,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/upcoming_events_section_test.dart"},"type":"testStart","time":27194}
+{"testID":119,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":27218}
+{"test":{"id":120,"name":"menampilkan empty state ketika tidak ada acara","suiteID":113,"groupIDs":[118],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":44,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/upcoming_events_section_test.dart"},"type":"testStart","time":27218}
+{"testID":117,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":27293}
+{"test":{"id":121,"name":"menampilkan data profil dari firestore","suiteID":106,"groupIDs":[115],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":36,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/profile_page_test.dart"},"type":"testStart","time":27293}
+{"testID":121,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":27412}
+{"test":{"id":122,"name":"menampilkan fallback ketika data profil kosong","suiteID":106,"groupIDs":[115],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":63,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/profile_page_test.dart"},"type":"testStart","time":27413}
+{"testID":122,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":27458}
+{"test":{"id":123,"name":"(tearDownAll)","suiteID":106,"groupIDs":[115],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":27459}
+{"testID":123,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":27461}
+{"suite":{"id":124,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/document_record_test.dart"},"type":"suite","time":27481}
+{"test":{"id":125,"name":"loading /home/runner/work/test-pkl/test-pkl/test/document_record_test.dart","suiteID":124,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":27481}
+{"testID":120,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":27714}
+{"test":{"id":126,"name":"menampilkan daftar acara mendatang","suiteID":113,"groupIDs":[118],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":59,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/upcoming_events_section_test.dart"},"type":"testStart","time":27715}
+{"testID":126,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":27791}
+{"test":{"id":127,"name":"(tearDownAll)","suiteID":113,"groupIDs":[118],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":27791}
+{"testID":127,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":27794}
+{"suite":{"id":128,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/chat_page_test.dart"},"type":"suite","time":27815}
+{"test":{"id":129,"name":"loading /home/runner/work/test-pkl/test-pkl/test/chat_page_test.dart","suiteID":128,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":27815}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":125,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":28474}
+{"group":{"id":130,"suiteID":124,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":1,"line":null,"column":null,"url":null},"type":"group","time":28474}
+{"test":{"id":131,"name":"(setUpAll)","suiteID":124,"groupIDs":[130],"metadata":{"skip":false,"skipReason":null},"line":9,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/document_record_test.dart"},"type":"testStart","time":28474}
+{"testID":131,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":28533}
+{"test":{"id":132,"name":"DocumentRecord.fromSnapshot memetakan field umum","suiteID":124,"groupIDs":[130],"metadata":{"skip":false,"skipReason":null},"line":13,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/document_record_test.dart"},"type":"testStart","time":28534}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":132,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":28630}
+{"test":{"id":133,"name":"(tearDownAll)","suiteID":124,"groupIDs":[130],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":28631}
+{"testID":133,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":28633}
+{"suite":{"id":134,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/document_repository_test.dart"},"type":"suite","time":28650}
+{"test":{"id":135,"name":"loading /home/runner/work/test-pkl/test-pkl/test/document_repository_test.dart","suiteID":134,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":28650}
+{"testID":129,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":28993}
+{"group":{"id":136,"suiteID":128,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":1,"line":null,"column":null,"url":null},"type":"group","time":28993}
+{"test":{"id":137,"name":"mode lokal tetap bisa kirim pesan setelah migrasi","suiteID":128,"groupIDs":[136],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":19,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/chat_page_test.dart"},"type":"testStart","time":28993}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":135,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":29522}
+{"group":{"id":138,"suiteID":134,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":2,"line":null,"column":null,"url":null},"type":"group","time":29522}
+{"test":{"id":139,"name":"(setUpAll)","suiteID":134,"groupIDs":[138],"metadata":{"skip":false,"skipReason":null},"line":10,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/document_repository_test.dart"},"type":"testStart","time":29522}
+{"testID":139,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":29601}
+{"test":{"id":140,"name":"addDocument menyimpan field wajib","suiteID":134,"groupIDs":[138],"metadata":{"skip":false,"skipReason":null},"line":14,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/document_repository_test.dart"},"type":"testStart","time":29602}
+{"testID":140,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":29691}
+{"test":{"id":141,"name":"watchDocuments mengurutkan createdAt desc","suiteID":134,"groupIDs":[138],"metadata":{"skip":false,"skipReason":null},"line":39,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/document_repository_test.dart"},"type":"testStart","time":29691}
+{"testID":141,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":29707}
+{"test":{"id":142,"name":"(tearDownAll)","suiteID":134,"groupIDs":[138],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":29707}
+{"testID":142,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":29709}
+{"suite":{"id":143,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/starred_messages_page_test.dart"},"type":"suite","time":29727}
+{"test":{"id":144,"name":"loading /home/runner/work/test-pkl/test-pkl/test/starred_messages_page_test.dart","suiteID":143,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":29727}
+{"testID":137,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":30005}
+{"suite":{"id":145,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/pemberkasan_page_test.dart"},"type":"suite","time":30025}
+{"test":{"id":146,"name":"loading /home/runner/work/test-pkl/test-pkl/test/pemberkasan_page_test.dart","suiteID":145,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":30025}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":144,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":30632}
+{"group":{"id":147,"suiteID":143,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":1,"line":null,"column":null,"url":null},"type":"group","time":30632}
+{"test":{"id":148,"name":"(setUpAll)","suiteID":143,"groupIDs":[147],"metadata":{"skip":false,"skipReason":null},"line":12,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/starred_messages_page_test.dart"},"type":"testStart","time":30632}
+{"testID":148,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":30653}
+{"test":{"id":149,"name":"menampilkan pesan berbintang dan bisa unstar","suiteID":143,"groupIDs":[147],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":16,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/starred_messages_page_test.dart"},"type":"testStart","time":30654}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":146,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":31193}
+{"group":{"id":150,"suiteID":145,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":3,"line":null,"column":null,"url":null},"type":"group","time":31194}
+{"test":{"id":151,"name":"(setUpAll)","suiteID":145,"groupIDs":[150],"metadata":{"skip":false,"skipReason":null},"line":13,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/pemberkasan_page_test.dart"},"type":"testStart","time":31194}
+{"testID":151,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":31214}
+{"test":{"id":152,"name":"menampilkan notice login ketika user belum masuk","suiteID":145,"groupIDs":[150],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":17,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/pemberkasan_page_test.dart"},"type":"testStart","time":31214}
+{"testID":149,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":31422}
+{"test":{"id":153,"name":"(tearDownAll)","suiteID":143,"groupIDs":[147],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":31422}
+{"testID":153,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":31430}
+{"suite":{"id":154,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/document_reminder_manager_test.dart"},"type":"suite","time":31449}
+{"test":{"id":155,"name":"loading /home/runner/work/test-pkl/test-pkl/test/document_reminder_manager_test.dart","suiteID":154,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":31449}
+{"testID":152,"messageType":"print","message":"══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════\nThe following FirebaseException was thrown building KeyedSubtree-[GlobalKey#70c7f]:\n[firebase_storage/no-bucket] No default storage bucket could be found. Ensure you have correctly\nfollowed the Getting Started guide.\n\nThe relevant error-causing widget was:\n  Scaffold Scaffold:file:///home/runner/work/test-pkl/test-pkl/test/pemberkasan_page_test.dart:21:31\n\nWhen the exception was thrown, this was the stack:\n#0      _throwNoBucketError (package:firebase_storage/src/firebase_storage.dart:200:3)\n#1      FirebaseStorage.instanceFor (package:firebase_storage/src/firebase_storage.dart:67:9)\n#2      FirebaseStorage.instance (package:firebase_storage/src/firebase_storage.dart:50:28)\n#3      new PemberkasanRepositoryImpl (package:cipta_vera_mandiri_digital/repositories/pemberkasan_repository.dart:73:46)\n#4      new PemberkasanViewModel (package:cipta_vera_mandiri_digital/view_models/pemberkasan_view_model.dart:44:36)\n#5      _PemberkasanPageState.initState (package:cipta_vera_mandiri_digital/app/modules/pages/pemberkasan_page.dart:42:13)\n#6      StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5852:55)\n#7      ComponentElement.mount (package:flutter/src/widgets/framework.dart:5699:5)\n...     Normal element mounting (25 frames)\n#32     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4548:16)\n#33     MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7169:36)\n#34     MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7185:32)\n...     Normal element mounting (332 frames)\n#366    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4548:16)\n#367    MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7169:36)\n#368    MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7185:32)\n...     Normal element mounting (465 frames)\n#833    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4548:16)\n#834    Element.updateChild (package:flutter/src/widgets/framework.dart:3998:20)\n#835    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5747:16)\n#836    Element.rebuild (package:flutter/src/widgets/framework.dart:5435:7)\n#837    ProxyElement.update (package:flutter/src/widgets/framework.dart:6051:5)\n#838    _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)\n#839    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)\n#840    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5747:16)\n#841    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5884:11)\n#842    Element.rebuild (package:flutter/src/widgets/framework.dart:5435:7)\n#843    StatefulElement.update (package:flutter/src/widgets/framework.dart:5909:5)\n#844    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)\n#845    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5747:16)\n#846    Element.rebuild (package:flutter/src/widgets/framework.dart:5435:7)\n#847    ProxyElement.update (package:flutter/src/widgets/framework.dart:6051:5)\n#848    _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)\n#849    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)\n#850    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5747:16)\n#851    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5884:11)\n#852    Element.rebuild (package:flutter/src/widgets/framework.dart:5435:7)\n#853    StatefulElement.update (package:flutter/src/widgets/framework.dart:5909:5)\n#854    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)\n#855    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5747:16)\n#856    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5884:11)\n#857    Element.rebuild (package:flutter/src/widgets/framework.dart:5435:7)\n#858    StatefulElement.update (package:flutter/src/widgets/framework.dart:5909:5)\n#859    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)\n#860    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5747:16)\n#861    Element.rebuild (package:flutter/src/widgets/framework.dart:5435:7)\n#862    ProxyElement.update (package:flutter/src/widgets/framework.dart:6051:5)\n#863    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)\n#864    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5747:16)\n#865    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5884:11)\n#866    Element.rebuild (package:flutter/src/widgets/framework.dart:5435:7)\n#867    StatefulElement.update (package:flutter/src/widgets/framework.dart:5909:5)\n#868    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)\n#869    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5747:16)\n#870    Element.rebuild (package:flutter/src/widgets/framework.dart:5435:7)\n#871    ProxyElement.update (package:flutter/src/widgets/framework.dart:6051:5)\n#872    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)\n#873    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5747:16)\n#874    Element.rebuild (package:flutter/src/widgets/framework.dart:5435:7)\n#875    ProxyElement.update (package:flutter/src/widgets/framework.dart:6051:5)\n#876    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)\n#877    _RawViewElement._updateChild (package:flutter/src/widgets/view.dart:481:16)\n#878    _RawViewElement.update (package:flutter/src/widgets/view.dart:568:5)\n#879    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)\n#880    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5747:16)\n#881    Element.rebuild (package:flutter/src/widgets/framework.dart:5435:7)\n#882    StatelessElement.update (package:flutter/src/widgets/framework.dart:5797:5)\n#883    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)\n#884    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5747:16)\n#885    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5884:11)\n#886    Element.rebuild (package:flutter/src/widgets/framework.dart:5435:7)\n#887    StatefulElement.update (package:flutter/src/widgets/framework.dart:5909:5)\n#888    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)\n#889    RootElement._rebuild (package:flutter/src/widgets/binding.dart:1716:16)\n#890    RootElement.update (package:flutter/src/widgets/binding.dart:1694:5)\n#891    RootElement.performRebuild (package:flutter/src/widgets/binding.dart:1708:7)\n#892    Element.rebuild (package:flutter/src/widgets/framework.dart:5435:7)\n#893    BuildScope._tryRebuild (package:flutter/src/widgets/framework.dart:2695:15)\n#894    BuildScope._flushDirtyElements (package:flutter/src/widgets/framework.dart:2752:11)\n#895    BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:3056:18)\n#896    AutomatedTestWidgetsFlutterBinding.drawFrame (package:flutter_test/src/binding.dart:1506:19)\n#897    RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:495:5)\n#898    SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1434:15)\n#899    SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1347:9)\n#900    AutomatedTestWidgetsFlutterBinding.pump.<anonymous closure> (package:flutter_test/src/binding.dart:1335:9)\n#903    TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)\n#904    AutomatedTestWidgetsFlutterBinding.pump (package:flutter_test/src/binding.dart:1324:27)\n#905    WidgetTester.pumpWidget.<anonymous closure> (package:flutter_test/src/widget_tester.dart:598:22)\n#908    TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)\n#909    WidgetTester.pumpWidget (package:flutter_test/src/widget_tester.dart:595:27)\n#910    main.<anonymous closure> (file:///home/runner/work/test-pkl/test-pkl/test/pemberkasan_page_test.dart:20:18)\n#911    testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:29)\n<asynchronous suspension>\n#912    TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)\n<asynchronous suspension>\n<asynchronous suspension>\n(elided 5 frames from dart:async and package:stack_trace)\n\n════════════════════════════════════════════════════════════════════════════════════════════════════","type":"print","time":31726}
+{"testID":152,"messageType":"print","message":"══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════\nThe following TestFailure was thrown running a test:\nExpected: exactly one matching candidate\n  Actual: _TextWidgetFinder:<Found 0 widgets with text \"Silakan masuk untuk mengakses fitur\npemberkasan.\": []>\n   Which: means none were found but one was expected\n\nWhen the exception was thrown, this was the stack:\n#4      main.<anonymous closure> (file:///home/runner/work/test-pkl/test-pkl/test/pemberkasan_page_test.dart:24:5)\n<asynchronous suspension>\n#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)\n<asynchronous suspension>\n#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)\n<asynchronous suspension>\n<asynchronous suspension>\n(elided one frame from package:stack_trace)\n\nThis was caught by the test expectation on the following line:\n  file:///home/runner/work/test-pkl/test-pkl/test/pemberkasan_page_test.dart line 24\nThe test description was:\n  menampilkan notice login ketika user belum masuk\n════════════════════════════════════════════════════════════════════════════════════════════════════","type":"print","time":31727}
+{"testID":152,"messageType":"print","message":"══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════\nThe following message was thrown:\nMultiple exceptions (2) were detected during the running of the current test, and at least one was\nunexpected.\n════════════════════════════════════════════════════════════════════════════════════════════════════","type":"print","time":31727}
+{"testID":152,"error":"Test failed. See exception logs above.\nThe test description was: menampilkan notice login ketika user belum masuk","stackTrace":"","isFailure":false,"type":"error","time":31728}
+{"testID":152,"result":"error","skipped":false,"hidden":false,"type":"testDone","time":31731}
+{"test":{"id":156,"name":"menampilkan empty state ketika tidak ada dokumen","suiteID":145,"groupIDs":[150],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":31,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/pemberkasan_page_test.dart"},"type":"testStart","time":31732}
+{"testID":156,"messageType":"print","message":"══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════\nThe following FirebaseException was thrown running a test:\n[firebase_storage/no-bucket] No default storage bucket could be found. Ensure you have correctly\nfollowed the Getting Started guide.\n\nWhen the exception was thrown, this was the stack:\n#0      _throwNoBucketError (package:firebase_storage/src/firebase_storage.dart:200:3)\n#1      FirebaseStorage.instanceFor (package:firebase_storage/src/firebase_storage.dart:67:9)\n#2      FirebaseStorage.instance (package:firebase_storage/src/firebase_storage.dart:50:28)\n#3      new PemberkasanRepositoryImpl (package:cipta_vera_mandiri_digital/repositories/pemberkasan_repository.dart:73:46)\n#4      main.<anonymous closure> (file:///home/runner/work/test-pkl/test-pkl/test/pemberkasan_page_test.dart:36:18)\n#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:29)\n<asynchronous suspension>\n#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)\n<asynchronous suspension>\n<asynchronous suspension>\n(elided one frame from package:stack_trace)\n\nThe test description was:\n  menampilkan empty state ketika tidak ada dokumen\n════════════════════════════════════════════════════════════════════════════════════════════════════","type":"print","time":31819}
+{"testID":156,"error":"Test failed. See exception logs above.\nThe test description was: menampilkan empty state ketika tidak ada dokumen","stackTrace":"","isFailure":false,"type":"error","time":31820}
+{"testID":156,"result":"error","skipped":false,"hidden":false,"type":"testDone","time":31820}
+{"test":{"id":157,"name":"menampilkan daftar dokumen dari firestore","suiteID":145,"groupIDs":[150],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":54,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/pemberkasan_page_test.dart"},"type":"testStart","time":31820}
+{"testID":157,"messageType":"print","message":"══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════\nThe following FirebaseException was thrown running a test:\n[firebase_storage/no-bucket] No default storage bucket could be found. Ensure you have correctly\nfollowed the Getting Started guide.\n\nWhen the exception was thrown, this was the stack:\n#0      _throwNoBucketError (package:firebase_storage/src/firebase_storage.dart:200:3)\n#1      FirebaseStorage.instanceFor (package:firebase_storage/src/firebase_storage.dart:67:9)\n#2      FirebaseStorage.instance (package:firebase_storage/src/firebase_storage.dart:50:28)\n#3      new PemberkasanRepositoryImpl (package:cipta_vera_mandiri_digital/repositories/pemberkasan_repository.dart:73:46)\n#4      main.<anonymous closure> (file:///home/runner/work/test-pkl/test-pkl/test/pemberkasan_page_test.dart:67:18)\n<asynchronous suspension>\n#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)\n<asynchronous suspension>\n#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)\n<asynchronous suspension>\n<asynchronous suspension>\n(elided one frame from package:stack_trace)\n\nThe test description was:\n  menampilkan daftar dokumen dari firestore\n════════════════════════════════════════════════════════════════════════════════════════════════════","type":"print","time":31841}
+{"testID":157,"error":"Test failed. See exception logs above.\nThe test description was: menampilkan daftar dokumen dari firestore","stackTrace":"","isFailure":false,"type":"error","time":31841}
+{"testID":157,"result":"error","skipped":false,"hidden":false,"type":"testDone","time":31841}
+{"test":{"id":158,"name":"(tearDownAll)","suiteID":145,"groupIDs":[150],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":31842}
+{"testID":158,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":31844}
+{"suite":{"id":159,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/complete_profile_view_model_test.dart"},"type":"suite","time":31860}
+{"test":{"id":160,"name":"loading /home/runner/work/test-pkl/test-pkl/test/complete_profile_view_model_test.dart","suiteID":159,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":31860}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":155,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":32368}
+{"group":{"id":161,"suiteID":154,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":1,"line":null,"column":null,"url":null},"type":"group","time":32369}
+{"test":{"id":162,"name":"previewUpcoming hanya mengembalikan jadwal dalam window","suiteID":154,"groupIDs":[161],"metadata":{"skip":false,"skipReason":null},"line":5,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/document_reminder_manager_test.dart"},"type":"testStart","time":32369}
+{"testID":162,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":32395}
+{"suite":{"id":163,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/contact_list_page_test.dart"},"type":"suite","time":32412}
+{"test":{"id":164,"name":"loading /home/runner/work/test-pkl/test-pkl/test/contact_list_page_test.dart","suiteID":163,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":32412}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":160,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":32932}
+{"group":{"id":165,"suiteID":159,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":4,"line":null,"column":null,"url":null},"type":"group","time":32933}
+{"test":{"id":166,"name":"loadOrGeneratePin mengembalikan hasil dari repository","suiteID":159,"groupIDs":[165],"metadata":{"skip":false,"skipReason":null},"line":55,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/complete_profile_view_model_test.dart"},"type":"testStart","time":32933}
+{"testID":166,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":32948}
+{"test":{"id":167,"name":"saveProfile warning saat tidak ada sesi user","suiteID":159,"groupIDs":[165],"metadata":{"skip":false,"skipReason":null},"line":70,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/complete_profile_view_model_test.dart"},"type":"testStart","time":32948}
+{"testID":167,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":32952}
+{"test":{"id":168,"name":"saveProfile success dan menyimpan payload ter-normalisasi","suiteID":159,"groupIDs":[165],"metadata":{"skip":false,"skipReason":null},"line":84,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/complete_profile_view_model_test.dart"},"type":"testStart","time":32952}
+{"testID":168,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":32954}
+{"test":{"id":169,"name":"saveProfile error saat repository gagal","suiteID":159,"groupIDs":[165],"metadata":{"skip":false,"skipReason":null},"line":107,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/complete_profile_view_model_test.dart"},"type":"testStart","time":32954}
+{"testID":169,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":32957}
+{"suite":{"id":170,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/test/group_profile_page_test.dart"},"type":"suite","time":33025}
+{"test":{"id":171,"name":"loading /home/runner/work/test-pkl/test-pkl/test/group_profile_page_test.dart","suiteID":170,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":33026}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":164,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":33723}
+{"group":{"id":172,"suiteID":163,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":2,"line":null,"column":null,"url":null},"type":"group","time":33724}
+{"test":{"id":173,"name":"(setUpAll)","suiteID":163,"groupIDs":[172],"metadata":{"skip":false,"skipReason":null},"line":12,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/contact_list_page_test.dart"},"type":"testStart","time":33724}
+{"testID":173,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":33745}
+{"test":{"id":174,"name":"menampilkan empty state ketika tidak ada kontak","suiteID":163,"groupIDs":[172],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":16,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/contact_list_page_test.dart"},"type":"testStart","time":33745}
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":null}}]
+{"testID":171,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":34398}
+{"group":{"id":175,"suiteID":170,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":2,"line":null,"column":null,"url":null},"type":"group","time":34398}
+{"test":{"id":176,"name":"(setUpAll)","suiteID":170,"groupIDs":[175],"metadata":{"skip":false,"skipReason":null},"line":11,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/test/group_profile_page_test.dart"},"type":"testStart","time":34398}
+{"testID":176,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":34425}
+{"test":{"id":177,"name":"menampilkan info grup dan aksi admin","suiteID":170,"groupIDs":[175],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":15,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/group_profile_page_test.dart"},"type":"testStart","time":34425}
+{"testID":174,"messageType":"print","message":"══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════\nThe following TestFailure was thrown running a test:\nExpected: exactly one matching candidate\n  Actual: _TextWidgetFinder:<Found 0 widgets with text \"Belum ada kontak. Tambahkan lewat tombol di\nAppBar.\": []>\n   Which: means none were found but one was expected\n\nWhen the exception was thrown, this was the stack:\n#4      main.<anonymous closure> (file:///home/runner/work/test-pkl/test-pkl/test/contact_list_page_test.dart:39:5)\n<asynchronous suspension>\n#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)\n<asynchronous suspension>\n#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)\n<asynchronous suspension>\n<asynchronous suspension>\n(elided one frame from package:stack_trace)\n\nThis was caught by the test expectation on the following line:\n  file:///home/runner/work/test-pkl/test-pkl/test/contact_list_page_test.dart line 39\nThe test description was:\n  menampilkan empty state ketika tidak ada kontak\n════════════════════════════════════════════════════════════════════════════════════════════════════","type":"print","time":34685}
+{"testID":174,"error":"Test failed. See exception logs above.\nThe test description was: menampilkan empty state ketika tidak ada kontak","stackTrace":"","isFailure":false,"type":"error","time":34686}
+{"testID":174,"result":"error","skipped":false,"hidden":false,"type":"testDone","time":34690}
+{"test":{"id":178,"name":"pindai PIN menambah kontak ke daftar","suiteID":163,"groupIDs":[172],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":45,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/contact_list_page_test.dart"},"type":"testStart","time":34690}
+{"testID":177,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":35362}
+{"test":{"id":179,"name":"non-admin tidak melihat kontrol manajemen anggota","suiteID":170,"groupIDs":[175],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":51,"root_column":3,"root_url":"file:///home/runner/work/test-pkl/test-pkl/test/group_profile_page_test.dart"},"type":"testStart","time":35363}
+{"testID":179,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":35439}
+{"test":{"id":180,"name":"(tearDownAll)","suiteID":170,"groupIDs":[175],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":35440}
+{"testID":180,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":35446}
+{"testID":178,"messageType":"print","message":"══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════\nThe following assertion was thrown running a test:\npumpAndSettle timed out\n\nWhen the exception was thrown, this was the stack:\n#0      WidgetTester.pumpAndSettle.<anonymous closure> (package:flutter_test/src/widget_tester.dart:717:11)\n<asynchronous suspension>\n#1      TestAsyncUtils.guard.<anonymous closure> (package:flutter_test/src/test_async_utils.dart:130:27)\n<asynchronous suspension>\n#2      main.<anonymous closure> (file:///home/runner/work/test-pkl/test-pkl/test/contact_list_page_test.dart:74:5)\n<asynchronous suspension>\n#3      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)\n<asynchronous suspension>\n#4      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)\n<asynchronous suspension>\n<asynchronous suspension>\n(elided one frame from package:stack_trace)\n\nThe test description was:\n  pindai PIN menambah kontak ke daftar\n════════════════════════════════════════════════════════════════════════════════════════════════════","type":"print","time":38356}
+{"testID":178,"error":"Test failed. See exception logs above.\nThe test description was: pindai PIN menambah kontak ke daftar","stackTrace":"","isFailure":false,"type":"error","time":38356}
+{"testID":178,"result":"error","skipped":false,"hidden":false,"type":"testDone","time":38357}
+{"test":{"id":181,"name":"(tearDownAll)","suiteID":163,"groupIDs":[172],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":38357}
+{"testID":181,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":38367}
+{"success":false,"type":"done","time":38392}

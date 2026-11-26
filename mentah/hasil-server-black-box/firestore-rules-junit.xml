@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Firestore &amp; Storage Rules (Black Box)" tests="97" failures="16" errors="0" time="10.38">
+  <testsuite name="users/{uid} (profil, PIN, peran)" errors="0" failures="12" skipped="0" timestamp="2026-11-26T13:03:53" time="9.547" tests="90">
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="BB-10 pemilik melengkapi profil (nama, divisi, foto, PIN) pada dokumennya sendiri" time="0.738">
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="BB-10 pengguna baru membuat dokumen profil miliknya (signup)" time="0.109">
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="BB-30 pemilik mengganti foto profil" time="0.089">
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="BB-25 / BB-27 pengguna login dapat membaca profil pegawai lain (pencarian kontak)" time="0.102">
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="RULE-01 pegawai tidak dapat mengubah profil pegawai lain" time="0.26">
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="RULE-02 pengguna tanpa login tidak dapat membaca profil" time="0.066">
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="RULE-03 pengguna tanpa login tidak dapat mengubah profil" time="0.069">
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="RULE-04 [TEMUAN] pemilik TIDAK boleh menaikkan peran dirinya menjadi superAdmin" time="0.061">
+      <failure>Error: Expected request to fail, but it succeeded.
+    at pr.then._a (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/node_modules/@firebase/rules-unit-testing/src/util.ts:137:9)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.&lt;anonymous&gt; (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/test/rules.test.js:54:5)</failure>
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="RULE-05 [TEMUAN] pemilik TIDAK boleh menambah peran modul (attendance) untuk dirinya sendiri" time="0.06">
+      <failure>Error: Expected request to fail, but it succeeded.
+    at pr.then._a (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/node_modules/@firebase/rules-unit-testing/src/util.ts:137:9)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.&lt;anonymous&gt; (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/test/rules.test.js:58:5)</failure>
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="RULE-06 [TEMUAN] pengguna baru TIDAK boleh membuat dokumen profil sendiri berisi roles.superAdmin=true" time="0.063">
+      <failure>Error: Expected request to fail, but it succeeded.
+    at pr.then._a (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/node_modules/@firebase/rules-unit-testing/src/util.ts:137:9)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.&lt;anonymous&gt; (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/test/rules.test.js:63:5)</failure>
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="BB-66 Super Admin mengubah nama dan divisi pengguna lain" time="0.065">
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="BB-68 Super Admin memberi peran modul (attendance) kepada pegawai" time="0.061">
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="BB-69 (sisi aturan) admin peran &apos;users&apos; non-Super Admin tidak dapat mengubah peran orang lain" time="0.065">
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="RULE-07 [TEMUAN] admin peran &apos;users&apos; dapat mengubah nama/PIN pengguna lain (fitur tab Pengguna)" time="0.065">
+      <failure>FirebaseError: 7 PERMISSION_DENIED: 
+false for &apos;update&apos; @ L128, evaluation error at L129:24 for &apos;update&apos; @ L129, false for &apos;update&apos; @ L665, false for &apos;update&apos; @ L128, Property superAdmin is undefined on object. for &apos;update&apos; @ L129, false for &apos;update&apos; @ L665</failure>
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="RULE-08 hanya admin/superAdmin yang dapat menghapus dokumen pengguna" time="0.087">
+    </testcase>
+    <testcase classname="users/{uid} (profil, PIN, peran)" name="BB-27 pemilik mengelola daftar kontaknya; pegawai lain tidak dapat membaca/menulisnya" time="0.115">
+    </testcase>
+    <testcase classname="chats dan messages" name="BB-29 pegawai membuat chat grup (dirinya termasuk anggota)" time="0.082">
+    </testcase>
+    <testcase classname="chats dan messages" name="BB-28 anggota chat mengirim pesan; anggota lain dapat membacanya" time="0.151">
+    </testcase>
+    <testcase classname="chats dan messages" name="RULE-09 non-anggota tidak dapat membaca maupun mengirim pesan pada chat orang lain" time="0.121">
+    </testcase>
+    <testcase classname="chats dan messages" name="RULE-09b pengirim tidak dapat memalsukan senderId pegawai lain" time="0.075">
+    </testcase>
+    <testcase classname="chats dan messages" name="RULE-10 [TEMUAN] non-anggota TIDAK boleh membaca dokumen chat (metadata, daftar anggota) milik orang lain" time="0.059">
+      <failure>Error: Expected request to fail, but it succeeded.
+    at pr.then._a (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/node_modules/@firebase/rules-unit-testing/src/util.ts:137:9)
+    at Object.&lt;anonymous&gt; (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/test/rules.test.js:124:5)</failure>
+    </testcase>
+    <testcase classname="chats dan messages" name="RULE-11 non-anggota tidak dapat mengubah dokumen chat orang lain" time="0.067">
+    </testcase>
+    <testcase classname="chats dan messages" name="RULE-11b pengguna tanpa login tidak dapat membuat chat" time="0.118">
+    </testcase>
+    <testcase classname="users/{uid}/attendance dan attendance_feed (presensi)" name="BB-14 pegawai menyimpan check-in tepat waktu pada subkoleksi miliknya" time="0.073">
+    </testcase>
+    <testcase classname="users/{uid}/attendance dan attendance_feed (presensi)" name="BB-14 pegawai menulis salinan feed presensinya (attendance_feed)" time="0.074">
+    </testcase>
+    <testcase classname="users/{uid}/attendance dan attendance_feed (presensi)" name="BB-16 check-in terlambat dengan alasan (note) tersimpan" time="0.064">
+    </testcase>
+    <testcase classname="users/{uid}/attendance dan attendance_feed (presensi)" name="RULE-12 pegawai tidak dapat menulis presensi atas nama pegawai lain" time="0.094">
+    </testcase>
+    <testcase classname="users/{uid}/attendance dan attendance_feed (presensi)" name="RULE-13 dokumen presensi dengan field di luar daftar yang diizinkan ditolak" time="0.067">
+    </testcase>
+    <testcase classname="users/{uid}/attendance dan attendance_feed (presensi)" name="RULE-14 pemilik tidak dapat mengubah atau menghapus rekaman presensinya setelah tersimpan" time="0.095">
+    </testcase>
+    <testcase classname="users/{uid}/attendance dan attendance_feed (presensi)" name="BB-19 pemilik membaca riwayat presensinya sendiri" time="0.065">
+    </testcase>
+    <testcase classname="users/{uid}/attendance dan attendance_feed (presensi)" name="RULE-15 pegawai tidak dapat membaca presensi pegawai lain" time="0.068">
+    </testcase>
+    <testcase classname="users/{uid}/attendance dan attendance_feed (presensi)" name="BB-53 admin peran attendance membaca detail rekaman presensi pegawai" time="0.065">
+    </testcase>
+    <testcase classname="users/{uid}/attendance dan attendance_feed (presensi)" name="BB-54 admin peran attendance mengoreksi status presensi menjadi Izin (manual)" time="0.057">
+    </testcase>
+    <testcase classname="users/{uid}/attendance dan attendance_feed (presensi)" name="RULE-16 pengguna tanpa login tidak dapat membaca/menulis presensi" time="0.079">
+    </testcase>
+    <testcase classname="users/{uid}/attendance dan attendance_feed (presensi)" name="RULE-17 feed presensi hanya dibaca admin/peran attendance, bukan pegawai biasa" time="0.094">
+    </testcase>
+    <testcase classname="attendance_windows dan admin_signals (jadwal absen manual)" name="BB-11 pegawai dapat membaca jadwal absen hari ini" time="0.071">
+    </testcase>
+    <testcase classname="attendance_windows dan admin_signals (jadwal absen manual)" name="RULE-18 pengguna tanpa login tidak dapat membaca jadwal absen" time="0.065">
+    </testcase>
+    <testcase classname="attendance_windows dan admin_signals (jadwal absen manual)" name="BB-50 Super Admin membuat/mengatur jadwal absen manual" time="0.076">
+    </testcase>
+    <testcase classname="attendance_windows dan admin_signals (jadwal absen manual)" name="BB-50 [TEMUAN] admin peran &apos;attendance&apos; (Admin Divisi Administrasi) dapat membuka absensi (jadwal tersimpan)" time="0.078">
+      <failure>FirebaseError: 7 PERMISSION_DENIED: 
+evaluation error at L209:32 for &apos;create&apos; @ L209, false for &apos;create&apos; @ L665, evaluation error at L209:32 for &apos;update&apos; @ L209, false for &apos;update&apos; @ L665, Property superAdmin is undefined on object. for &apos;create&apos; @ L209, false for &apos;create&apos; @ L665</failure>
+    </testcase>
+    <testcase classname="attendance_windows dan admin_signals (jadwal absen manual)" name="BB-50 [TEMUAN] admin peran &apos;attendance&apos; dapat menulis sinyal admin_signals (pemicu notifikasi)" time="0.062">
+      <failure>FirebaseError: 7 PERMISSION_DENIED: 
+evaluation error at L648:24 for &apos;create&apos; @ L648, false for &apos;create&apos; @ L665, false for &apos;update&apos; @ L660, false for &apos;update&apos; @ L665, Property superAdmin is undefined on object. for &apos;create&apos; @ L648, false for &apos;create&apos; @ L665</failure>
+    </testcase>
+    <testcase classname="attendance_windows dan admin_signals (jadwal absen manual)" name="BB-50 Super Admin menulis sinyal attendance_open" time="0.06">
+    </testcase>
+    <testcase classname="attendance_windows dan admin_signals (jadwal absen manual)" name="BB-51 Super Admin menutup absensi (hapus jadwal)" time="0.048">
+    </testcase>
+    <testcase classname="attendance_windows dan admin_signals (jadwal absen manual)" name="BB-51 [TEMUAN] admin peran &apos;attendance&apos; dapat menghapus jadwal absen (tutup absensi)" time="0.049">
+      <failure>FirebaseError: 7 PERMISSION_DENIED: 
+evaluation error at L215:24 for &apos;delete&apos; @ L215, false for &apos;delete&apos; @ L665, Property superAdmin is undefined on object. for &apos;delete&apos; @ L215, false for &apos;delete&apos; @ L665</failure>
+    </testcase>
+    <testcase classname="attendance_windows dan admin_signals (jadwal absen manual)" name="RULE-19 pegawai biasa tidak dapat membuat, mengubah, atau menghapus jadwal absen" time="0.13">
+    </testcase>
+    <testcase classname="attendance_windows dan admin_signals (jadwal absen manual)" name="RULE-20 jadwal dengan field di luar daftar atau tipe salah ditolak (admin)" time="0.15">
+    </testcase>
+    <testcase classname="attendance_windows dan admin_signals (jadwal absen manual)" name="RULE-21 pegawai biasa tidak dapat menulis atau membaca admin_signals; sinyal tidak dapat diubah" time="0.122">
+    </testcase>
+    <testcase classname="attendance_windows dan admin_signals (jadwal absen manual)" name="BB-07 (sisi aturan) akun tanpa roles tidak dapat menulis modul admin mana pun" time="0.087">
+    </testcase>
+    <testcase classname="leave_requests (cuti dan izin)" name="BB-21 pegawai mengajukan cuti lengkap dengan lampiran (status pending)" time="0.055">
+    </testcase>
+    <testcase classname="leave_requests (cuti dan izin)" name="BB-22 [TEMUAN] pengajuan cuti dengan alasan kosong ditolak server (validasi bukan hanya di klien)" time="0.053">
+      <failure>Error: Expected request to fail, but it succeeded.
+    at pr.then._a (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/node_modules/@firebase/rules-unit-testing/src/util.ts:137:9)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.&lt;anonymous&gt; (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/test/rules.test.js:297:5)</failure>
+    </testcase>
+    <testcase classname="leave_requests (cuti dan izin)" name="BB-22 pengajuan cuti tanpa field alasan sama sekali ditolak" time="0.048">
+    </testcase>
+    <testcase classname="leave_requests (cuti dan izin)" name="BB-23 pegawai mengajukan izin lengkap (status pending)" time="0.048">
+    </testcase>
+    <testcase classname="leave_requests (cuti dan izin)" name="BB-24 [TEMUAN] pengajuan izin dengan alasan kosong ditolak server" time="0.063">
+      <failure>Error: Expected request to fail, but it succeeded.
+    at pr.then._a (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/node_modules/@firebase/rules-unit-testing/src/util.ts:137:9)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.&lt;anonymous&gt; (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/test/rules.test.js:310:5)</failure>
+    </testcase>
+    <testcase classname="leave_requests (cuti dan izin)" name="RULE-22 pegawai tidak dapat mengajukan atas nama pegawai lain, langsung berstatus approved, atau dengan jenis tak dikenal" time="0.099">
+    </testcase>
+    <testcase classname="leave_requests (cuti dan izin)" name="BB-19 pemilik dan admin peran requests dapat membaca pengajuan; pegawai lain tidak" time="0.127">
+    </testcase>
+    <testcase classname="leave_requests (cuti dan izin)" name="BB-56 admin peran requests menyetujui pengajuan (nama pemutus tercatat)" time="0.049">
+    </testcase>
+    <testcase classname="leave_requests (cuti dan izin)" name="BB-57 admin peran requests menolak pengajuan" time="0.054">
+    </testcase>
+    <testcase classname="leave_requests (cuti dan izin)" name="RULE-23 pemilik tidak dapat menyetujui sendiri atau menghapus pengajuannya; admin peran lain (attendance) tidak dapat memutus" time="0.089">
+    </testcase>
+    <testcase classname="material_requests (order bahan)" name="BB-36 Pegawai Lapangan membuat permintaan material (status pending)" time="0.069">
+    </testcase>
+    <testcase classname="material_requests (order bahan)" name="RULE-24 permintaan material tidak dapat dibuat atas nama pegawai lain atau tanpa login" time="0.094">
+    </testcase>
+    <testcase classname="material_requests (order bahan)" name="BB-39 [TEMUAN] pegawai divisi kantor (Finance) TIDAK boleh membuat permintaan material (pembatasan di server)" time="0.054">
+      <failure>Error: Expected request to fail, but it succeeded.
+    at pr.then._a (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/node_modules/@firebase/rules-unit-testing/src/util.ts:137:9)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.&lt;anonymous&gt; (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/test/rules.test.js:376:5)</failure>
+    </testcase>
+    <testcase classname="material_requests (order bahan)" name="BB-40 pemohon membaca permintaan miliknya" time="0.046">
+    </testcase>
+    <testcase classname="material_requests (order bahan)" name="RULE-25 pegawai lain tidak dapat membaca (get) permintaan material milik orang lain" time="0.048">
+    </testcase>
+    <testcase classname="material_requests (order bahan)" name="RULE-26 [TEMUAN] pegawai biasa TIDAK boleh me-list seluruh permintaan material milik orang lain" time="0.088">
+      <failure>Error: Expected request to fail, but it succeeded.
+    at pr.then._a (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/node_modules/@firebase/rules-unit-testing/src/util.ts:137:9)
+    at Object.&lt;anonymous&gt; (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/test/rules.test.js:388:5)</failure>
+    </testcase>
+    <testcase classname="material_requests (order bahan)" name="BB-42 pemohon menandai barang diterima dari status approved (delivered + penerima + waktu)" time="0.064">
+    </testcase>
+    <testcase classname="material_requests (order bahan)" name="BB-43 pemohon tidak dapat menandai diterima saat status masih pending" time="0.07">
+    </testcase>
+    <testcase classname="material_requests (order bahan)" name="RULE-27 pegawai lain tidak dapat menandai diterima pada permintaan orang lain" time="0.069">
+    </testcase>
+    <testcase classname="material_requests (order bahan)" name="RULE-28 pemohon tidak dapat menyetujui permintaannya sendiri atau mengubah item" time="0.072">
+    </testcase>
+    <testcase classname="material_requests (order bahan)" name="BB-63 admin peran material menyetujui sebagian item (status tetap pending)" time="0.057">
+    </testcase>
+    <testcase classname="material_requests (order bahan)" name="BB-64 admin peran material menyetujui seluruh item (status approved, penyetuju tercatat)" time="0.05">
+    </testcase>
+    <testcase classname="material_requests (order bahan)" name="RULE-29 admin peran lain (documents) tidak dapat menyetujui permintaan material" time="0.063">
+    </testcase>
+    <testcase classname="material_requests (order bahan)" name="RULE-30 hanya peran material yang dapat menghapus permintaan; pemohon tidak" time="0.086">
+    </testcase>
+    <testcase classname="employee_documents (pemberkasan)" name="BB-44 pegawai mengunggah dokumen miliknya sendiri (dengan kedaluwarsa dan pengingat)" time="0.053">
+    </testcase>
+    <testcase classname="employee_documents (pemberkasan)" name="BB-60 admin peran documents mengunggah dokumen untuk pegawai" time="0.061">
+    </testcase>
+    <testcase classname="employee_documents (pemberkasan)" name="RULE-31 pegawai tanpa peran documents tidak dapat membuat dokumen atas nama pegawai lain" time="0.059">
+    </testcase>
+    <testcase classname="employee_documents (pemberkasan)" name="RULE-32 dokumen dengan field tidak dikenal atau tanpa title ditolak" time="0.079">
+    </testcase>
+    <testcase classname="employee_documents (pemberkasan)" name="BB-45 pemilik dan admin peran documents dapat membaca dokumen; pegawai lain dan anonim tidak" time="0.102">
+    </testcase>
+    <testcase classname="employee_documents (pemberkasan)" name="BB-44 pemilik memperbarui catatan dokumennya" time="0.046">
+    </testcase>
+    <testcase classname="employee_documents (pemberkasan)" name="RULE-33 pemilik tidak dapat memindahkan kepemilikan dokumen ke pegawai lain" time="0.055">
+    </testcase>
+    <testcase classname="employee_documents (pemberkasan)" name="BB-46 pemilik menghapus dokumen miliknya" time="0.048">
+    </testcase>
+    <testcase classname="employee_documents (pemberkasan)" name="BB-62 admin peran documents menghapus dokumen pegawai" time="0.047">
+    </testcase>
+    <testcase classname="employee_documents (pemberkasan)" name="RULE-34 pegawai lain tidak dapat menghapus atau mengubah dokumen orang lain" time="0.069">
+    </testcase>
+    <testcase classname="calendar_events (kalender)" name="BB-25 pegawai login dapat membaca acara kalender; anonim tidak" time="0.069">
+    </testcase>
+    <testcase classname="calendar_events (kalender)" name="BB-58 admin peran calendar membuat acara untuk divisi sasaran" time="0.051">
+    </testcase>
+    <testcase classname="calendar_events (kalender)" name="BB-26 pegawai menambah acara pribadi (createdBy = dirinya)" time="0.052">
+    </testcase>
+    <testcase classname="calendar_events (kalender)" name="RULE-35 pegawai tidak dapat membuat acara atas nama orang lain atau tanpa judul" time="0.073">
+    </testcase>
+    <testcase classname="calendar_events (kalender)" name="BB-59 admin peran calendar mengubah judul lalu menghapus acara" time="0.073">
+    </testcase>
+    <testcase classname="calendar_events (kalender)" name="RULE-36 pegawai tanpa peran calendar tidak dapat mengubah/menghapus acara" time="0.08">
+    </testcase>
+    <testcase classname="Company profile (publik) dan aturan default" name="RULE-37 konten company profile dapat dibaca publik tanpa login" time="0.06">
+    </testcase>
+    <testcase classname="Company profile (publik) dan aturan default" name="RULE-38 konten company profile hanya dapat diubah admin/superAdmin" time="0.079">
+    </testcase>
+    <testcase classname="Company profile (publik) dan aturan default" name="RULE-39 koleksi yang tidak terdaftar ditolak untuk semua pengguna, termasuk superAdmin" time="0.076">
+    </testcase>
+  </testsuite>
+  <testsuite name="Storage rules" errors="0" failures="4" skipped="0" timestamp="2026-11-26T13:04:03" time="0.738" tests="7">
+    <testcase classname="Storage rules" name="BB-44 pegawai login mengunggah berkas dokumen miliknya" time="0.255">
+    </testcase>
+    <testcase classname="Storage rules" name="BB-30 pegawai login mengunggah/mengganti foto profil" time="0.025">
+    </testcase>
+    <testcase classname="Storage rules" name="BB-41 pegawai login dapat membuka/mengunduh berkas miliknya (PDF/dokumen)" time="0.027">
+    </testcase>
+    <testcase classname="Storage rules" name="RULE-S01 [TEMUAN] pengguna tanpa login TIDAK boleh membaca berkas dokumen pegawai" time="0.015">
+      <failure>Error: Expected request to fail, but it succeeded.
+    at pr.then._a (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/node_modules/@firebase/rules-unit-testing/src/util.ts:137:9)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.&lt;anonymous&gt; (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/test/storage.test.js:42:5)</failure>
+    </testcase>
+    <testcase classname="Storage rules" name="RULE-S02 [TEMUAN] pengguna tanpa login TIDAK boleh mengunggah berkas" time="0.017">
+      <failure>Error: Expected request to fail, but it succeeded.
+    at pr.then._a (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/node_modules/@firebase/rules-unit-testing/src/util.ts:137:9)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.&lt;anonymous&gt; (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/test/storage.test.js:46:5)</failure>
+    </testcase>
+    <testcase classname="Storage rules" name="RULE-S03 [TEMUAN] pegawai TIDAK boleh menimpa berkas dokumen milik pegawai lain" time="0.015">
+      <failure>Error: Expected request to fail, but it succeeded.
+    at pr.then._a (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/node_modules/@firebase/rules-unit-testing/src/util.ts:137:9)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.&lt;anonymous&gt; (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/test/storage.test.js:50:5)</failure>
+    </testcase>
+    <testcase classname="Storage rules" name="RULE-S04 [TEMUAN] pegawai TIDAK boleh membaca berkas dokumen pegawai lain" time="0.014">
+      <failure>Error: Expected request to fail, but it succeeded.
+    at pr.then._a (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/node_modules/@firebase/rules-unit-testing/src/util.ts:137:9)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Object.&lt;anonymous&gt; (/home/runner/work/test-pkl/test-pkl/tests_ci/firestore_rules/test/storage.test.js:54:5)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

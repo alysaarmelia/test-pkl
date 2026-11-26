@@ -1,0 +1,123 @@
+{
+  "sumber": [
+    "tools_ci/in/hasil-server-black-box/firestore-rules-junit.xml (junit, 97 tes)",
+    "tools_ci/in/hasil-server-black-box/functions-junit.xml (junit, 43 tes)",
+    "tools_ci/in/hasil-ui-black-box/ui_black_box.jsonl (flutter, 27 tes)",
+    "tools_ci/in/hasil-white-box/white_box.jsonl (flutter, 64 tes)"
+  ],
+  "galat_muat_berkas": {},
+  "tes_tanpa_pemetaan": [
+    "users/{uid} (profil, PIN, peran) :: RULE-01 pegawai tidak dapat mengubah profil pegawai lain",
+    "users/{uid} (profil, PIN, peran) :: RULE-02 pengguna tanpa login tidak dapat membaca profil",
+    "users/{uid} (profil, PIN, peran) :: RULE-03 pengguna tanpa login tidak dapat mengubah profil",
+    "users/{uid} (profil, PIN, peran) :: RULE-04 [TEMUAN] pemilik TIDAK boleh menaikkan peran dirinya menjadi superAdmin",
+    "users/{uid} (profil, PIN, peran) :: RULE-05 [TEMUAN] pemilik TIDAK boleh menambah peran modul (attendance) untuk dirinya sendiri",
+    "users/{uid} (profil, PIN, peran) :: RULE-06 [TEMUAN] pengguna baru TIDAK boleh membuat dokumen profil sendiri berisi roles.superAdmin=true",
+    "users/{uid} (profil, PIN, peran) :: RULE-07 [TEMUAN] admin peran 'users' dapat mengubah nama/PIN pengguna lain (fitur tab Pengguna)",
+    "users/{uid} (profil, PIN, peran) :: RULE-08 hanya admin/superAdmin yang dapat menghapus dokumen pengguna",
+    "chats dan messages :: RULE-09 non-anggota tidak dapat membaca maupun mengirim pesan pada chat orang lain",
+    "chats dan messages :: RULE-09b pengirim tidak dapat memalsukan senderId pegawai lain",
+    "chats dan messages :: RULE-10 [TEMUAN] non-anggota TIDAK boleh membaca dokumen chat (metadata, daftar anggota) milik orang lain",
+    "chats dan messages :: RULE-11 non-anggota tidak dapat mengubah dokumen chat orang lain",
+    "chats dan messages :: RULE-11b pengguna tanpa login tidak dapat membuat chat",
+    "users/{uid}/attendance dan attendance_feed (presensi) :: RULE-12 pegawai tidak dapat menulis presensi atas nama pegawai lain",
+    "users/{uid}/attendance dan attendance_feed (presensi) :: RULE-13 dokumen presensi dengan field di luar daftar yang diizinkan ditolak",
+    "users/{uid}/attendance dan attendance_feed (presensi) :: RULE-14 pemilik tidak dapat mengubah atau menghapus rekaman presensinya setelah tersimpan",
+    "users/{uid}/attendance dan attendance_feed (presensi) :: RULE-15 pegawai tidak dapat membaca presensi pegawai lain",
+    "users/{uid}/attendance dan attendance_feed (presensi) :: RULE-16 pengguna tanpa login tidak dapat membaca/menulis presensi",
+    "users/{uid}/attendance dan attendance_feed (presensi) :: RULE-17 feed presensi hanya dibaca admin/peran attendance, bukan pegawai biasa",
+    "attendance_windows dan admin_signals (jadwal absen manual) :: RULE-18 pengguna tanpa login tidak dapat membaca jadwal absen",
+    "attendance_windows dan admin_signals (jadwal absen manual) :: RULE-19 pegawai biasa tidak dapat membuat, mengubah, atau menghapus jadwal absen",
+    "attendance_windows dan admin_signals (jadwal absen manual) :: RULE-20 jadwal dengan field di luar daftar atau tipe salah ditolak (admin)",
+    "attendance_windows dan admin_signals (jadwal absen manual) :: RULE-21 pegawai biasa tidak dapat menulis atau membaca admin_signals; sinyal tidak dapat diubah",
+    "leave_requests (cuti dan izin) :: RULE-22 pegawai tidak dapat mengajukan atas nama pegawai lain, langsung berstatus approved, atau dengan jenis tak dikenal",
+    "leave_requests (cuti dan izin) :: RULE-23 pemilik tidak dapat menyetujui sendiri atau menghapus pengajuannya; admin peran lain (attendance) tidak dapat memutus",
+    "material_requests (order bahan) :: RULE-24 permintaan material tidak dapat dibuat atas nama pegawai lain atau tanpa login",
+    "material_requests (order bahan) :: RULE-25 pegawai lain tidak dapat membaca (get) permintaan material milik orang lain",
+    "material_requests (order bahan) :: RULE-26 [TEMUAN] pegawai biasa TIDAK boleh me-list seluruh permintaan material milik orang lain",
+    "material_requests (order bahan) :: RULE-27 pegawai lain tidak dapat menandai diterima pada permintaan orang lain",
+    "material_requests (order bahan) :: RULE-28 pemohon tidak dapat menyetujui permintaannya sendiri atau mengubah item",
+    "material_requests (order bahan) :: RULE-29 admin peran lain (documents) tidak dapat menyetujui permintaan material",
+    "material_requests (order bahan) :: RULE-30 hanya peran material yang dapat menghapus permintaan; pemohon tidak",
+    "employee_documents (pemberkasan) :: RULE-31 pegawai tanpa peran documents tidak dapat membuat dokumen atas nama pegawai lain",
+    "employee_documents (pemberkasan) :: RULE-32 dokumen dengan field tidak dikenal atau tanpa title ditolak",
+    "employee_documents (pemberkasan) :: RULE-33 pemilik tidak dapat memindahkan kepemilikan dokumen ke pegawai lain",
+    "employee_documents (pemberkasan) :: RULE-34 pegawai lain tidak dapat menghapus atau mengubah dokumen orang lain",
+    "calendar_events (kalender) :: RULE-35 pegawai tidak dapat membuat acara atas nama orang lain atau tanpa judul",
+    "calendar_events (kalender) :: RULE-36 pegawai tanpa peran calendar tidak dapat mengubah/menghapus acara",
+    "Company profile (publik) dan aturan default :: RULE-37 konten company profile dapat dibaca publik tanpa login",
+    "Company profile (publik) dan aturan default :: RULE-38 konten company profile hanya dapat diubah admin/superAdmin",
+    "Company profile (publik) dan aturan default :: RULE-39 koleksi yang tidak terdaftar ditolak untuk semua pengguna, termasuk superAdmin",
+    "Storage rules :: RULE-S01 [TEMUAN] pengguna tanpa login TIDAK boleh membaca berkas dokumen pegawai",
+    "Storage rules :: RULE-S02 [TEMUAN] pengguna tanpa login TIDAK boleh mengunggah berkas",
+    "Storage rules :: RULE-S03 [TEMUAN] pegawai TIDAK boleh menimpa berkas dokumen milik pegawai lain",
+    "Storage rules :: RULE-S04 [TEMUAN] pegawai TIDAK boleh membaca berkas dokumen pegawai lain",
+    "onDocumentCreatedNotification (employee_documents) :: RULE-F03 event tanpa data: fungsi selesai tanpa error dan tanpa kirim",
+    "onDocumentCreatedNotification (employee_documents) :: RULE-F04 [TEMUAN] dokumen untuk divisi 'Heavy Equipment' (ada di daftar profil) semestinya sampai ke pengguna divisi itu",
+    "onAdminAttendanceOpened (admin_signals) :: RULE-F05 tipe sinyal lain diabaikan"
+  ],
+  "white_box": {
+    "jumlah_dijalankan": 64,
+    "berhasil": 57,
+    "gagal": 7,
+    "dilewati": 0,
+    "gagal_rinci": [
+      "test/chat_list_page_test.dart :: menampilkan empty state ketika tidak ada chat :: Test failed. See exception logs above. The test description was: menampilkan empty state ketika tidak ada chat",
+      "test/chat_list_page_test.dart :: menampilkan item chat dari firestore :: Test failed. See exception logs above. The test description was: menampilkan item chat dari firestore",
+      "test/pemberkasan_page_test.dart :: menampilkan notice login ketika user belum masuk :: Test failed. See exception logs above. The test description was: menampilkan notice login ketika user belum masuk",
+      "test/pemberkasan_page_test.dart :: menampilkan empty state ketika tidak ada dokumen :: Test failed. See exception logs above. The test description was: menampilkan empty state ketika tidak ada dokumen",
+      "test/pemberkasan_page_test.dart :: menampilkan daftar dokumen dari firestore :: Test failed. See exception logs above. The test description was: menampilkan daftar dokumen dari firestore",
+      "test/contact_list_page_test.dart :: menampilkan empty state ketika tidak ada kontak :: Test failed. See exception logs above. The test description was: menampilkan empty state ketika tidak ada kontak",
+      "test/contact_list_page_test.dart :: pindai PIN menambah kontak ke daftar :: Test failed. See exception logs above. The test description was: pindai PIN menambah kontak ke daftar"
+    ]
+  },
+  "black_box": {
+    "jumlah_id": 54,
+    "berhasil": 48,
+    "gagal": 6,
+    "tanpa_status": 0,
+    "gagal_rinci": {
+      "BB-39": "[server] [TEMUAN] pegawai divisi kantor (Finance) TIDAK boleh membuat permintaan material (pembatasan di server) (Error: Expected request to fail, but it succeeded. at pr.then._a (/home/runner/work/test-pkl/test-pk)",
+      "BB-22": "[server] [TEMUAN] pengajuan cuti dengan alasan kosong ditolak server (validasi bukan hanya di klien) (Error: Expected request to fail, but it succeeded. at pr.then._a (/home/runner/work/test-pkl/test-pk)",
+      "BB-24": "[server] [TEMUAN] pengajuan izin dengan alasan kosong ditolak server (Error: Expected request to fail, but it succeeded. at pr.then._a (/home/runner/work/test-pkl/test-pk)",
+      "BB-50": "[server] [TEMUAN] admin peran 'attendance' (Admin Divisi Administrasi) dapat membuka absensi (jadwal tersimpan) (FirebaseError: 7 PERMISSION_DENIED: evaluation error at L209:32 for 'create' @ L209, false for 'crea); [server] [TEMUAN] admin peran 'attendance' dapat menulis sinyal admin_signals (pemicu notifikasi) (FirebaseError: 7 PERMISSION_DENIED: evaluation error at L648:24 for 'create' @ L648, ",
+      "BB-51": "[server] [TEMUAN] admin peran 'attendance' dapat menghapus jadwal absen (tutup absensi) (FirebaseError: 7 PERMISSION_DENIED: evaluation error at L215:24 for 'delete' @ L215, false for 'dele)",
+      "BB-52": "[server] RULE-F02 [TEMUAN] isHoliday:false DENGAN name semestinya bukan libur (kode: (isHoliday !== false || name)) (Error: expect(received).toHaveLength(expected) Expected length: 1 Received length: 0 Received array:)"
+    }
+  },
+  "excel": {
+    "wb_terisi": 64,
+    "wb_tidak_cocok": [],
+    "wb_baris_tanpa_hasil": [],
+    "bb_terisi": 53,
+    "bb_id_tidak_ada_di_excel": [
+      "BB-TAMBAHAN-01"
+    ],
+    "bb_baris_tanpa_hasil": [
+      "BB-06",
+      "BB-12",
+      "BB-13",
+      "BB-15",
+      "BB-17",
+      "BB-18",
+      "BB-31",
+      "BB-32",
+      "BB-34",
+      "BB-47",
+      "BB-48",
+      "BB-49",
+      "BB-55",
+      "BB-61",
+      "BB-65",
+      "BB-67"
+    ],
+    "dilewati_sudah_terisi": 0
+  },
+  "ringkasan": {
+    "White Box": "57 berhasil, 7 gagal, 0 dilewati dari 64 tes",
+    "Black Box (ID BB-nn)": "48 berhasil, 6 gagal dari 54 ID",
+    "Tes tanpa pemetaan": 48,
+    "Berkas gagal dimuat": 0,
+    "Excel": "White Box terisi 64, tidak cocok 0; Black Box terisi 53"
+  }
+}

@@ -1,0 +1,16 @@
+[36m[1mi  emulators:[22m[39m Starting emulators: auth, firestore, storage
+[36m[1mi  emulators:[22m[39m Detected demo project ID "demo-cvm", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail.
+[36m[1mi  firestore:[22m[39m Firestore Emulator logging to [1mfirestore-debug.log[22m
+[32m[1m✔  firestore:[22m[39m Firestore Emulator was started in standard edition.
+[32m[1m✔  firestore:[22m[39m Firestore Emulator UI websocket is running on 9150.
+[36m[1mi [22m[39m Running script: [1mbash tools_ci/flutter_integration_dalam_emulator.sh[22m
+[36m[1mi [22m[39m To verify the email address bb01.1795699125337109@demo-cvm.test, follow this link: http://127.0.0.1:9099/emulator/action?mode=verifyEmail&lang=en&oobCode=nfIiIPnencip4dTQA23Ov1MDau5DXPHy0BH2xDU3qBpYf0-Ardm1AE&apiKey=fake-api-key
+[36m[1mi [22m[39m To verify the email address bb04.1795699145531517@demo-cvm.test, follow this link: http://127.0.0.1:9099/emulator/action?mode=verifyEmail&lang=en&oobCode=1lFgS6BqJVQjNpa1vfQ1MGlEKWj_vb0Jk7TeQqHCHaJs3IEkMfo3oE&apiKey=fake-api-key
+[36m[1mi [22m[39m To reset the password for bb08.1795699157600241@demo-cvm.test, follow this link: http://127.0.0.1:9099/emulator/action?mode=resetPassword&lang=en&oobCode=A1A4MuN24dH6JbjduZLHxG5UzMHVEkaxFUqdkMUYqtuYi9oemuPRrL&apiKey=fake-api-key&newPassword=NEW_PASSWORD_HERE
+[32m[1m✔ [22m[39m Script exited successfully (code 0)
+[36m[1mi  emulators:[22m[39m Shutting down emulators.
+[36m[1mi  firestore:[22m[39m Stopping Firestore Emulator
+[36m[1mi  auth:[22m[39m Stopping Authentication Emulator
+[36m[1mi  storage:[22m[39m Stopping Storage Emulator
+[36m[1mi  hub:[22m[39m Stopping emulator hub
+[36m[1mi  logging:[22m[39m Stopping Logging Emulator

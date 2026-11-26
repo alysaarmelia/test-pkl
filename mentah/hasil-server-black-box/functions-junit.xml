@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Cloud Functions (logika offline)" tests="43" failures="2" errors="0" time="1.258">
+  <testsuite name="onDocumentCreatedNotification (employee_documents)" errors="0" failures="1" skipped="0" timestamp="2026-11-26T13:04:06" time="0.769" tests="16">
+    <testcase classname="onDocumentCreatedNotification (employee_documents)" name="BB-44 pemilik mengunggah sendiri (createdBy == uid): tidak ada notifikasi" time="0.004">
+    </testcase>
+    <testcase classname="onDocumentCreatedNotification (employee_documents)" name="BB-60 admin mengunggah untuk pegawai (createdBy != uid): notifikasi ke token pemilik" time="0.001">
+    </testcase>
+    <testcase classname="onDocumentCreatedNotification (employee_documents)" name="BB-60 createdBy &apos;admin-dashboard&apos; (cadangan UI admin) tetap dianggap dari admin" time="0">
+    </testcase>
+    <testcase classname="onDocumentCreatedNotification (employee_documents)" name="BB-60 divisions tertentu: token pemilik + semua pengguna divisi sasaran, tidak termasuk divisi lain" time="0.001">
+    </testcase>
+    <testcase classname="onDocumentCreatedNotification (employee_documents)" name="BB-60 divisions &apos;all&apos;: hanya pemilik dokumen (tidak broadcast ke semua pegawai)" time="0">
+    </testcase>
+    <testcase classname="onDocumentCreatedNotification (employee_documents)" name="BB-60 pemilik tanpa token dan tanpa divisi sasaran: tidak ada pengiriman" time="0.001">
+    </testcase>
+    <testcase classname="onDocumentCreatedNotification (employee_documents)" name="BB-60 token pemilik dicari lewat email bila dokumen pengguna tidak memilikinya" time="0">
+    </testcase>
+    <testcase classname="onDocumentCreatedNotification (employee_documents)" name="RULE-F03 event tanpa data: fungsi selesai tanpa error dan tanpa kirim" time="0.001">
+    </testcase>
+    <testcase classname="onDocumentCreatedNotification (employee_documents)" name="RULE-F04 [TEMUAN] dokumen untuk divisi &apos;Heavy Equipment&apos; (ada di daftar profil) semestinya sampai ke pengguna divisi itu" time="0.001">
+      <failure>Error: expect(received).toContain(expected) // indexOf
+
+Expected value: &quot;tok-alat&quot;
+Received array: [&quot;tok-rina-1&quot;, &quot;tok-rina-2&quot;]
+    at Object.&lt;anonymous&gt; (/home/runner/work/test-pkl/test-pkl/tests_ci/functions/test/triggers.test.ts:87:26)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)</failure>
+    </testcase>
+    <testcase classname="onChatMessageCreated (notifikasi chat)" name="BB-28 pesan 1-1: terkirim ke token lawan bicara saja, judul = nama pengirim, isi = teks" time="0.001">
+    </testcase>
+    <testcase classname="onChatMessageCreated (notifikasi chat)" name="BB-29 pesan grup (&gt;2 anggota): judul = nama grup, token semua anggota selain pengirim" time="0.001">
+    </testcase>
+    <testcase classname="onChatMessageCreated (notifikasi chat)" name="BB-28 pesan foto/file tanpa teks memakai isi bawaan" time="0.001">
+    </testcase>
+    <testcase classname="onChatMessageCreated (notifikasi chat)" name="BB-28 pesan silent, tanpa senderId, chat tidak ada, atau tanpa token: tidak mengirim" time="0">
+    </testcase>
+    <testcase classname="onAdminAttendanceOpened (admin_signals)" name="BB-33 / BB-50 sinyal attendance_open: notifikasi &apos;Admin membuka absensi&apos; ke semua token" time="0.001">
+    </testcase>
+    <testcase classname="onAdminAttendanceOpened (admin_signals)" name="BB-51 sinyal attendance_close: notifikasi &apos;Admin menutup absensi&apos;" time="0.001">
+    </testcase>
+    <testcase classname="onAdminAttendanceOpened (admin_signals)" name="RULE-F05 tipe sinyal lain diabaikan" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Definisi jadwal (cron + zona waktu)" errors="0" failures="1" skipped="0" timestamp="2026-11-26T13:04:06" time="0.802" tests="27">
+    <testcase classname="Definisi jadwal (cron + zona waktu)" name="scheduleDailyAttendanceWindow berjalan pada &apos;0 6 * * *&apos; zona Asia/Makassar (WITA) [BB-52]" time="0.003">
+    </testcase>
+    <testcase classname="Definisi jadwal (cron + zona waktu)" name="broadcastAttendanceOpeningSoon berjalan pada &apos;0 8 * * *&apos; zona Asia/Makassar (WITA) [BB-35]" time="0">
+    </testcase>
+    <testcase classname="Definisi jadwal (cron + zona waktu)" name="broadcastAttendanceOpen berjalan pada &apos;30 8 * * *&apos; zona Asia/Makassar (WITA) [BB-35]" time="0.001">
+    </testcase>
+    <testcase classname="Definisi jadwal (cron + zona waktu)" name="broadcastAttendanceClosingSoon berjalan pada &apos;20 9 * * *&apos; zona Asia/Makassar (WITA) [BB-35]" time="0">
+    </testcase>
+    <testcase classname="BB-52 scheduleDailyAttendanceWindow (06.00 WITA)" name="BB-52 Senin: membuat attendance_windows/{yyyy-MM-dd} 08:30-09:30 WITA, toleransi 30 menit" time="0.014">
+    </testcase>
+    <testcase classname="BB-52 scheduleDailyAttendanceWindow (06.00 WITA)" name="BB-52 Sabtu: tetap membuat jadwal (hanya Minggu yang dilewati)" time="0.001">
+    </testcase>
+    <testcase classname="BB-52 scheduleDailyAttendanceWindow (06.00 WITA)" name="BB-52 Minggu: tidak membuat jadwal" time="0">
+    </testcase>
+    <testcase classname="BB-52 scheduleDailyAttendanceWindow (06.00 WITA)" name="BB-52 Tanggal ada di koleksi holidays: jadwal dilewati" time="0.001">
+    </testcase>
+    <testcase classname="BB-52 scheduleDailyAttendanceWindow (06.00 WITA)" name="BB-52 Zona waktu: pukul 06.00 WITA = 22.00 UTC hari sebelumnya tetap memakai tanggal WITA" time="0">
+    </testcase>
+    <testcase classname="BB-52 scheduleDailyAttendanceWindow (06.00 WITA)" name="RULE-F01 holidays/{tanggal} berisi isHoliday:false (tanpa name) tidak dianggap libur" time="0.001">
+    </testcase>
+    <testcase classname="BB-52 scheduleDailyAttendanceWindow (06.00 WITA)" name="RULE-F02 [TEMUAN] isHoliday:false DENGAN name semestinya bukan libur (kode: (isHoliday !== false || name))" time="0.001">
+      <failure>Error: expect(received).toHaveLength(expected)
+
+Expected length: 1
+Received length: 0
+Received array:  []
+    at Object.&lt;anonymous&gt; (/home/runner/work/test-pkl/test-pkl/tests_ci/functions/test/schedule.test.ts:76:26)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)</failure>
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceOpeningSoon" name="BB-35 hari kerja 08:00:00 WITA: kirim ke semua token unik (string/array/map), judul &quot;Absensi dibuka 30 menit lagi&quot;" time="0.001">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceOpeningSoon" name="BB-35 Minggu: tidak mengirim" time="0.001">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceOpeningSoon" name="BB-35 Hari libur (holidays): tidak mengirim" time="0">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceOpeningSoon" name="BB-35 Tanpa token terdaftar: tidak memanggil FCM" time="0.001">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceOpeningSoon" name="BB-35 Token ganda antar pengguna hanya dikirim sekali; &gt;450 token dipecah per batch 450" time="0.005">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceOpen" name="BB-35 hari kerja 08:30:00 WITA: kirim ke semua token unik (string/array/map), judul &quot;Absensi sudah dibuka&quot;" time="0.001">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceOpen" name="BB-35 Minggu: tidak mengirim" time="0">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceOpen" name="BB-35 Hari libur (holidays): tidak mengirim" time="0">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceOpen" name="BB-35 Tanpa token terdaftar: tidak memanggil FCM" time="0.001">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceOpen" name="BB-35 Token ganda antar pengguna hanya dikirim sekali; &gt;450 token dipecah per batch 450" time="0.002">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceClosingSoon" name="BB-35 hari kerja 09:20:00 WITA: kirim ke semua token unik (string/array/map), judul &quot;Absensi ditutup 10 menit lagi&quot;" time="0.001">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceClosingSoon" name="BB-35 Minggu: tidak mengirim" time="0">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceClosingSoon" name="BB-35 Hari libur (holidays): tidak mengirim" time="0.001">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceClosingSoon" name="BB-35 Tanpa token terdaftar: tidak memanggil FCM" time="0">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast) broadcastAttendanceClosingSoon" name="BB-35 Token ganda antar pengguna hanya dikirim sekali; &gt;450 token dipecah per batch 450" time="0.002">
+    </testcase>
+    <testcase classname="BB-35 Notifikasi terjadwal 08.00 / 08.30 / 09.20 (FCM broadcast)" name="BB-35 Sabtu 08.30 WITA tetap mengirim (Senin-Sabtu)" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>

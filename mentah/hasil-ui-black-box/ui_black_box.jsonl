@@ -1,0 +1,164 @@
+{"protocolVersion":"0.1.1","runnerVersion":null,"pid":3379,"type":"start","time":0}
+{"suite":{"id":0,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/integration_test/profile_test.dart"},"type":"suite","time":0}
+{"test":{"id":1,"name":"loading /home/runner/work/test-pkl/test-pkl/integration_test/profile_test.dart","suiteID":0,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":1}
+{"count":5,"time":7,"type":"allSuites"}
+Running Gradle task 'assembleDebug'...                          
+Checking the license for package NDK (Side by side) 27.0.12077973 in /usr/local/lib/android/sdk/licenses
+License for package NDK (Side by side) 27.0.12077973 accepted.
+Preparing "Install NDK (Side by side) 27.0.12077973 v.27.0.12077973".
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" ready.
+Installing NDK (Side by side) 27.0.12077973 in /usr/local/lib/android/sdk/ndk/27.0.12077973
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" complete.
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" finished.
+Checking the license for package Android SDK Platform 33 in /usr/local/lib/android/sdk/licenses
+License for package Android SDK Platform 33 accepted.
+Preparing "Install Android SDK Platform 33 (revision 3)".
+"Install Android SDK Platform 33 (revision 3)" ready.
+Installing Android SDK Platform 33 in /usr/local/lib/android/sdk/platforms/android-33
+"Install Android SDK Platform 33 (revision 3)" complete.
+"Install Android SDK Platform 33 (revision 3)" finished.
+Checking the license for package Android SDK Platform 32 in /usr/local/lib/android/sdk/licenses
+License for package Android SDK Platform 32 accepted.
+Preparing "Install Android SDK Platform 32 (revision 1)".
+"Install Android SDK Platform 32 (revision 1)" ready.
+Installing Android SDK Platform 32 in /usr/local/lib/android/sdk/platforms/android-32
+"Install Android SDK Platform 32 (revision 1)" complete.
+"Install Android SDK Platform 32 (revision 1)" finished.
+Checking the license for package Android SDK Platform 31 in /usr/local/lib/android/sdk/licenses
+License for package Android SDK Platform 31 accepted.
+Preparing "Install Android SDK Platform 31 (revision 1)".
+"Install Android SDK Platform 31 (revision 1)" ready.
+Installing Android SDK Platform 31 in /usr/local/lib/android/sdk/platforms/android-31
+"Install Android SDK Platform 31 (revision 1)" complete.
+"Install Android SDK Platform 31 (revision 1)" finished.
+Checking the license for package CMake 3.22.1 in /usr/local/lib/android/sdk/licenses
+License for package CMake 3.22.1 accepted.
+Preparing "Install CMake 3.22.1 v.3.22.1".
+"Install CMake 3.22.1 v.3.22.1" ready.
+Installing CMake 3.22.1 in /usr/local/lib/android/sdk/cmake/3.22.1
+"Install CMake 3.22.1 v.3.22.1" complete.
+"Install CMake 3.22.1 v.3.22.1" finished.
+Running Gradle task 'assembleDebug'...                            402.2s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...           4.6s
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":"http://127.0.0.1:35253/wjMCJym5H9w=/"}}]
+{"testID":1,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":423052}
+{"group":{"id":2,"suiteID":0,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":3,"line":null,"column":null,"url":null},"type":"group","time":423054}
+{"test":{"id":3,"name":"(setUpAll)","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":32,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/home/runner/work/test-pkl/test-pkl/integration_test/profile_test.dart"},"type":"testStart","time":423055}
+{"testID":3,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":423179}
+{"test":{"id":4,"name":"BB-09 | Login pertama, profil belum lengkap -> diarahkan ke Lengkapi Profil","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":423180}
+{"testID":4,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":447911}
+{"test":{"id":5,"name":"BB-10 | Melengkapi profil (nama + divisi Finance, tanpa foto) -> tersimpan, PIN terbit, ke Beranda","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":447911}
+{"testID":5,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":460251}
+{"test":{"id":6,"name":"BB-10 (validasi) | Simpan profil dengan nama & divisi kosong -> pesan validasi, tidak tersimpan","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":460251}
+{"testID":6,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":467630}
+{"test":{"id":7,"name":"(tearDownAll)","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":50,"column":5,"url":"package:integration_test/integration_test.dart"},"type":"testStart","time":468266}
+{"testID":7,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":468272}
+{"suite":{"id":8,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/integration_test/pemberkasan_test.dart"},"type":"suite","time":469414}
+{"test":{"id":9,"name":"loading /home/runner/work/test-pkl/test-pkl/integration_test/pemberkasan_test.dart","suiteID":8,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":469414}
+Running Gradle task 'assembleDebug'...                          
+Running Gradle task 'assembleDebug'...                             33.2s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...        2,149ms
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":"http://127.0.0.1:43293/g2vgRPQIJUQ=/"}}]
+{"testID":9,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":510724}
+{"group":{"id":10,"suiteID":8,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":3,"line":null,"column":null,"url":null},"type":"group","time":510724}
+{"test":{"id":11,"name":"(setUpAll)","suiteID":8,"groupIDs":[10],"metadata":{"skip":false,"skipReason":null},"line":22,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/home/runner/work/test-pkl/test-pkl/integration_test/pemberkasan_test.dart"},"type":"testStart","time":510724}
+{"testID":11,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":510812}
+{"test":{"id":12,"name":"BB-44 | Unggah dokumen + kedaluwarsa + pengingat 1 bulan -> tampil di daftar (pengingat lokal: manual)","suiteID":8,"groupIDs":[10],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":510812}
+{"testID":12,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":532627}
+{"test":{"id":13,"name":"BB-44 (validasi) | Form unggah: nama kosong ditolak; tanpa berkas ditolak","suiteID":8,"groupIDs":[10],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":532628}
+{"testID":13,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":543366}
+{"test":{"id":14,"name":"BB-46 | Hapus dokumen milik sendiri -> dokumen & berkas terhapus (pembatalan pengingat: manual)","suiteID":8,"groupIDs":[10],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":543367}
+{"testID":14,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":550282}
+{"test":{"id":15,"name":"(tearDownAll)","suiteID":8,"groupIDs":[10],"metadata":{"skip":false,"skipReason":null},"line":50,"column":5,"url":"package:integration_test/integration_test.dart"},"type":"testStart","time":550283}
+{"testID":15,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":550332}
+{"suite":{"id":16,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/integration_test/material_test.dart"},"type":"suite","time":550759}
+{"test":{"id":17,"name":"loading /home/runner/work/test-pkl/test-pkl/integration_test/material_test.dart","suiteID":16,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":550759}
+Running Gradle task 'assembleDebug'...                          
+Running Gradle task 'assembleDebug'...                             30.2s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...        2,232ms
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":"http://127.0.0.1:41611/2GJIb2EddM8=/"}}]
+{"testID":17,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":588909}
+{"group":{"id":18,"suiteID":16,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":8,"line":null,"column":null,"url":null},"type":"group","time":588910}
+{"test":{"id":19,"name":"(setUpAll)","suiteID":16,"groupIDs":[18],"metadata":{"skip":false,"skipReason":null},"line":18,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/home/runner/work/test-pkl/test-pkl/integration_test/material_test.dart"},"type":"testStart","time":588910}
+{"testID":19,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":589013}
+{"test":{"id":20,"name":"BB-36 | Permintaan lengkap (PT/CV, proyek, tanggal, 2 item) -> tersimpan Pending + DOCX & PDF dibuat","suiteID":16,"groupIDs":[18],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":589013}
+{"testID":20,"messageType":"print","message":"Helvetica-Bold has no Unicode support see https://github.com/DavBfr/dart_pdf/wiki/Fonts-Management","type":"print","time":606460}
+{"testID":20,"messageType":"print","message":"Helvetica has no Unicode support see https://github.com/DavBfr/dart_pdf/wiki/Fonts-Management","type":"print","time":606475}
+{"testID":20,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":611984}
+{"test":{"id":21,"name":"BB-37 | Permintaan tanpa item -> \"Tambah minimal satu item material.\"","suiteID":16,"groupIDs":[18],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":611985}
+{"testID":21,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":622943}
+{"test":{"id":22,"name":"BB-38 | Item tanpa jumlah -> \"Lengkapi nama dan jumlah untuk setiap material.\"","suiteID":16,"groupIDs":[18],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":622944}
+{"testID":22,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":635027}
+{"test":{"id":23,"name":"BB-39 | Menu Material dari divisi Finance -> ditolak, muncul pesan pembatasan akses","suiteID":16,"groupIDs":[18],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":635028}
+{"testID":23,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":643614}
+{"test":{"id":24,"name":"BB-39 (pembanding) | Menu Material dari divisi Purchasing and Logistik -> halaman terbuka","suiteID":16,"groupIDs":[18],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":643614}
+{"testID":24,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":651935}
+{"test":{"id":25,"name":"BB-40 | Tracking -> daftar permintaan tampil dengan status dan item","suiteID":16,"groupIDs":[18],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":651936}
+{"testID":25,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":655468}
+{"test":{"id":26,"name":"BB-42 | Permintaan Disetujui -> \"Barang diterima\" mengubah status jadi Diterima (nama + waktu)","suiteID":16,"groupIDs":[18],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":655468}
+{"testID":26,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":662060}
+{"test":{"id":27,"name":"BB-43 | Permintaan masih Pending -> tombol \"Barang diterima\" tidak tersedia","suiteID":16,"groupIDs":[18],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":662061}
+{"testID":27,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":666332}
+{"test":{"id":28,"name":"(tearDownAll)","suiteID":16,"groupIDs":[18],"metadata":{"skip":false,"skipReason":null},"line":50,"column":5,"url":"package:integration_test/integration_test.dart"},"type":"testStart","time":666332}
+{"testID":28,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":666395}
+{"suite":{"id":29,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/integration_test/auth_test.dart"},"type":"suite","time":667311}
+{"test":{"id":30,"name":"loading /home/runner/work/test-pkl/test-pkl/integration_test/auth_test.dart","suiteID":29,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":667311}
+Running Gradle task 'assembleDebug'...                          
+Running Gradle task 'assembleDebug'...                             25.6s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...        1,517ms
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":"http://127.0.0.1:42775/kSxtgKrMo1Y=/"}}]
+{"testID":30,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":699607}
+{"group":{"id":31,"suiteID":29,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":7,"line":null,"column":null,"url":null},"type":"group","time":699607}
+{"test":{"id":32,"name":"(setUpAll)","suiteID":29,"groupIDs":[31],"metadata":{"skip":false,"skipReason":null},"line":18,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/home/runner/work/test-pkl/test-pkl/integration_test/auth_test.dart"},"type":"testStart","time":699607}
+{"testID":32,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":699745}
+{"test":{"id":33,"name":"BB-01 | Registrasi data lengkap -> akun dibuat & email verifikasi dikirim","suiteID":29,"groupIDs":[31],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":699745}
+{"testID":33,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":706444}
+{"test":{"id":34,"name":"BB-02 | Registrasi isian kosong -> ditolak + pesan validasi","suiteID":29,"groupIDs":[31],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":706445}
+{"testID":34,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":716479}
+{"test":{"id":35,"name":"BB-03 | Login akun terverifikasi & profil lengkap -> lanjut ke Beranda","suiteID":29,"groupIDs":[31],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":716479}
+{"testID":35,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":720730}
+{"test":{"id":36,"name":"BB-04 | Login email belum terverifikasi -> ditolak, email verifikasi dikirim ulang","suiteID":29,"groupIDs":[31],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":720731}
+{"testID":36,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":724579}
+{"test":{"id":37,"name":"BB-05 | Login isian kosong -> tidak diproses, muncul pesan validasi","suiteID":29,"groupIDs":[31],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":724580}
+{"testID":37,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":728533}
+{"test":{"id":38,"name":"BB-TAMBAHAN-01 | Login kata sandi salah -> pesan galat, tetap di halaman login","suiteID":29,"groupIDs":[31],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":728534}
+{"testID":38,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":732292}
+{"test":{"id":39,"name":"BB-08 | Lupa kata sandi -> email atur ulang dikirim","suiteID":29,"groupIDs":[31],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":732292}
+{"testID":39,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":737761}
+{"test":{"id":40,"name":"(tearDownAll)","suiteID":29,"groupIDs":[31],"metadata":{"skip":false,"skipReason":null},"line":50,"column":5,"url":"package:integration_test/integration_test.dart"},"type":"testStart","time":737761}
+{"testID":40,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":737806}
+{"suite":{"id":41,"platform":"vm","path":"/home/runner/work/test-pkl/test-pkl/integration_test/leave_test.dart"},"type":"suite","time":738595}
+{"test":{"id":42,"name":"loading /home/runner/work/test-pkl/test-pkl/integration_test/leave_test.dart","suiteID":41,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":738595}
+Running Gradle task 'assembleDebug'...                          
+Running Gradle task 'assembleDebug'...                             28.0s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...        1,514ms
+
+[{"event":"test.startedProcess","params":{"vmServiceUri":"http://127.0.0.1:44329/XG4aPW2elpM=/"}}]
+{"testID":42,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":772886}
+{"group":{"id":43,"suiteID":41,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":6,"line":null,"column":null,"url":null},"type":"group","time":772886}
+{"test":{"id":44,"name":"(setUpAll)","suiteID":41,"groupIDs":[43],"metadata":{"skip":false,"skipReason":null},"line":21,"column":3,"url":"file:///home/runner/work/test-pkl/test-pkl/home/runner/work/test-pkl/test-pkl/integration_test/leave_test.dart"},"type":"testStart","time":772886}
+{"testID":44,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":772956}
+{"test":{"id":45,"name":"BB-21 | Cuti lengkap + lampiran PDF -> tersimpan berstatus Menunggu (juga tampil di Riwayat)","suiteID":41,"groupIDs":[43],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":772957}
+{"testID":45,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":793187}
+{"test":{"id":46,"name":"BB-22 | Cuti tanpa alasan -> pesan \"Lengkapi data cuti terlebih dahulu\", tidak tersimpan","suiteID":41,"groupIDs":[43],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":793188}
+{"testID":46,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":798534}
+{"test":{"id":47,"name":"BB-23 | Izin lengkap (tanggal, jam mulai & selesai, alasan) -> tersimpan berstatus Menunggu","suiteID":41,"groupIDs":[43],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":798534}
+{"testID":47,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":814830}
+{"test":{"id":48,"name":"BB-24 | Izin tanpa alasan -> pesan \"Lengkapi data izin terlebih dahulu\", tidak tersimpan","suiteID":41,"groupIDs":[43],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":814831}
+{"testID":48,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":820532}
+{"test":{"id":49,"name":"BB-19 | Riwayat setelah check-in -> kehadiran, cuti, dan izin tampil beserta statusnya","suiteID":41,"groupIDs":[43],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":820533}
+{"testID":49,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":825347}
+{"test":{"id":50,"name":"BB-20 | Riwayat akun baru tanpa data -> tampil keadaan kosong","suiteID":41,"groupIDs":[43],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart"},"type":"testStart","time":825348}
+{"testID":50,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":828510}
+{"test":{"id":51,"name":"(tearDownAll)","suiteID":41,"groupIDs":[43],"metadata":{"skip":false,"skipReason":null},"line":50,"column":5,"url":"package:integration_test/integration_test.dart"},"type":"testStart","time":828511}
+{"testID":51,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":828554}
+{"success":true,"type":"done","time":829185}
