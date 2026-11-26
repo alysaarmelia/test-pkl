@@ -79,7 +79,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: "17"
+          java-version: "21"   # firebase-tools terbaru mewajibkan JDK >= 21 (Gradle 8.14 mendukung)
 
       - name: Pasang firebase-tools
         run: npm install -g firebase-tools
@@ -139,7 +139,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: "17"
+          java-version: "21"   # firebase-tools terbaru mewajibkan JDK >= 21 (Gradle 8.14 mendukung)
 
       - uses: actions/setup-node@v4
         with:
@@ -225,6 +225,8 @@ jobs:
     needs: [white-box, server-black-box, ui-black-box]
     if: always()
     timeout-minutes: 10
+    permissions:
+      contents: write   # untuk menyimpan hasil ke cabang "hasil-pengujian"
     steps:
       - uses: actions/checkout@v4
 
@@ -272,3 +274,26 @@ jobs:
             tools_ci/out/rekap.json
             tools_ci/out/Hasil_Pengujian_terisi.xlsx
           if-no-files-found: warn
+
+      - name: Simpan hasil ke cabang hasil-pengujian (bisa dibaca tanpa unduh artefak)
+        if: always()
+        run: |
+          set -e
+          tujuan="$RUNNER_TEMP/hasil"
+          mkdir -p "$tujuan/mentah"
+          cp tools_ci/out/rekap.json tools_ci/out/Hasil_Pengujian_terisi.xlsx "$tujuan/" 2>/dev/null || true
+          cp -r tools_ci/in/. "$tujuan/mentah/" 2>/dev/null || true
+          cd "$tujuan"
+          {
+            echo "# Hasil Pengujian Otomatis"
+            echo
+            echo "- Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+            echo "- Commit: ${GITHUB_SHA}"
+            echo "- Waktu (UTC): $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          } > README.md
+          git init -q -b hasil-pengujian
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Hasil pengujian run ${GITHUB_RUN_ID}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" hasil-pengujian
