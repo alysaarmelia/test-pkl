@@ -1,0 +1,228 @@
+<mxfile host="65bd71144e">
+    <diagram id="employee-flow" name="Employee App Features">
+        <mxGraphModel dx="2674" dy="1911" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1400" background="light-dark(#ffffff, #c1c1c1)" math="0" shadow="1">
+            <root>
+                <mxCell id="0-emp"/>
+                <mxCell id="1-emp" parent="0-emp"/>
+                <mxCell id="empStart" value="Pengguna membuka aplikasi karyawan" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#0D47A1;fillColor=#e8f4ff;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="1150" y="10" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="empInit" value="Inisialisasi aplikasi mobile&#xa;- WidgetsFlutterBinding, load dotenv, Firebase.initializeApp&#xa;- Start layanan notifikasi, face recognition, push, chat, activity&#xa;- Prefetch kamera &amp; izin lokasi" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#0D47A1;fillColor=#ffffff;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="1120" y="110" width="320" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="empAuthCheck" value="Sesi login &amp; email terverifikasi?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#1976D2;fillColor=#bbdefb;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="1150" y="260" width="240" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="empAuthView" value="AuthView (Login/Sign Up)&#xa;- Form email &amp; password, toggle registrasi&#xa;- Kirim verifikasi email &amp; snackbar umpan balik&#xa;- Autologin setelah verifikasi sukses" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#283593;fillColor=#ede7f6;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="620" y="340" width="280" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="empForgot" value="Reset kata sandi&#xa;- Kirim email pemulihan via FirebaseAuth&#xa;- Instruksi lanjutan di snackbar" style="parallelogram;whiteSpace=wrap;html=1;strokeColor=#6A1B9A;fillColor=#f3e5f5;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="560" y="620" width="260" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="empProfileCheck" value="Profil karyawan lengkap?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#1B5E20;fillColor=#c8e6c9;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="1150" y="400" width="240" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="empCompleteProfile" value="Lengkapi Profil&#xa;- Unggah foto (ImagePicker + Cropper) &amp; validasi rasio&#xa;- Isi nama, tim, role, PIN unik via ChatPinService&#xa;- Simpan ke Firestore &amp; Storage dengan retry" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#1B5E20;fillColor=#ffffff;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="1710" y="300" width="300" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="empHome" value="HomePage + FloatingNav&#xa;- Bottom nav 5 tab (Home, Chat, Kalender, Profil, Pengaturan)&#xa;- Menu grid bisa trigger perpindahan tab&#xa;- IndexedStack simpan state per modul" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#0D47A1;fillColor=#ffffff;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="1120" y="550" width="320" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="empDashboard" value="Dashboard Utama&#xa;- Kartu profil &amp; progres kelengkapan&#xa;- MenuGrid akses cepat ke Absensi, Material, Pemberkasan&#xa;- NewsSection &amp; UpcomingEvents sinkron kalender admin" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#0D47A1;fillColor=#ffffff;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="830" y="830" width="280" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="empAttendance" value="Absensi &amp; Perizinan&#xa;- Check-in/out wajah + tantangan liveness &amp; geo-fence&#xa;- Unggah bukti foto/lokasi, catat catatan otomatis perangkat&#xa;- Ajukan cuti/izin, pantau status &amp; riwayat 30 hari" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#1B5E20;fillColor=#e8f5e9;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="1130" y="730" width="280" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="empCalendar" value="Kalender Tim&#xa;- TableCalendar + API hari libur nasional&#xa;- Tambah acara (judul, kategori, jam, lokasi, deskripsi)&#xa;- Sorot event mendatang &amp; sync ke dashboard home" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#00695C;fillColor=#e0f2f1;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="1500" y="725" width="280" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="empMaterial" value="Permintaan Material&#xa;- Form multi-item generate DOCX/PDF otomatis&#xa;- Simpan request ke Firestore + Storage dengan status pending&#xa;- Tracking status &amp; mark delivered, akses/unduh PDF" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F57C00;fillColor=#ffffff;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="690" y="1110" width="280" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="empDocs" value="Pemberkasan Karyawan&#xa;- Stream dokumen pribadi dengan pencarian &amp; filter kedaluwarsa&#xa;- Unggah file (mobile/web) + set pengingat sebelum jatuh tempo&#xa;- Buka tautan, unduh, hapus &amp; trigger notifikasi admin" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6D4C41;fillColor=#ffffff;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="1060" y="1110" width="280" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="empChat" value="Chat &amp; Kolaborasi&#xa;- Daftar chat dengan pin, arsip, sembunyikan &amp; pencarian&#xa;- Group chat, kontak internal, avatar caching Firebase Storage&#xa;- Tandai unread &amp; notifikasi real-time (Push + Firestore)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#283593;fillColor=#ede7f6;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="1660" y="1060" width="280" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="empSettings" value="Profil &amp; Pengaturan&#xa;- Lihat/ubah profil, update foto &amp; PIN dalam QR modal&#xa;- Kelola perizinan notifikasi &amp; kontak internal (ContactList)&#xa;- Akses shortcut profil/chat &amp; logout multi platform" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6A1B9A;fillColor=#f3e5f5;fontSize=12;" parent="1-emp" vertex="1">
+                    <mxGeometry x="1410" y="1290" width="280" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#0D47A1;fontSize=11;" parent="1-emp" source="empStart" target="empInit" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#0D47A1;fontSize=11;" parent="1-emp" source="empInit" target="empAuthCheck" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge3" value="Tidak" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#D32F2F;fontSize=11;" parent="1-emp" source="empAuthCheck" target="empAuthView" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge4" value="Ya" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#1B5E20;fontSize=11;" parent="1-emp" source="empAuthCheck" target="empProfileCheck" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge5" value="Reset password" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#6A1B9A;fontSize=11;" parent="1-emp" source="empAuthView" target="empForgot" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge6" value="Kembali login" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#6A1B9A;fontSize=11;dashed=1;" parent="1-emp" source="empForgot" target="empAuthView" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge7" value="Login sukses" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#283593;fontSize=11;" parent="1-emp" source="empAuthView" target="empProfileCheck" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge8" value="Belum lengkap" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#1B5E20;fontSize=11;" parent="1-emp" source="empProfileCheck" target="empCompleteProfile" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge9" value="Simpan profil" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#1B5E20;fontSize=11;" parent="1-emp" source="empCompleteProfile" target="empHome" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge10" value="Sudah" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#1B5E20;fontSize=11;" parent="1-emp" source="empProfileCheck" target="empHome" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge11" value="Tab Home" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#0D47A1;fontSize=11;" parent="1-emp" source="empHome" target="empDashboard" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge12" value="Menu Absensi" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#1B5E20;fontSize=11;" parent="1-emp" source="empHome" target="empAttendance" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge13" value="Menu Kalender" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#00695C;fontSize=11;" parent="1-emp" source="empHome" target="empCalendar" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge14" value="Menu Material" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#F57C00;fontSize=11;" parent="1-emp" source="empHome" target="empMaterial" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge15" value="Menu Pemberkasan" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#6D4C41;fontSize=11;" parent="1-emp" source="empHome" target="empDocs" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge16" value="Menu Chat" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#283593;fontSize=11;" parent="1-emp" source="empHome" target="empChat" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="empEdge17" value="Menu Profil &amp; Pengaturan" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#6A1B9A;fontSize=11;" parent="1-emp" source="empHome" target="empSettings" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="admin-flow" name="Admin Dashboard Features">
+        <mxGraphModel dx="3740" dy="1673" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1400" math="0" shadow="1">
+            <root>
+                <mxCell id="0-admin"/>
+                <mxCell id="1-admin" parent="0-admin"/>
+                <mxCell id="admStart" value="Admin membuka portal dashboard" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#1A237E;fillColor=#e8eaf6;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="490" y="20" width="240" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="admInit" value="Inisialisasi aplikasi admin&#xa;- Load .env &amp; Firebase.initializeApp&#xa;- Setup NotificationService, push channel, tema&#xa;- Prefetch repository &amp; glass theming" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#283593;fillColor=#ffffff;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="450" y="120" width="320" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="admLogin" value="Halaman Login&#xa;- Form email + password (Firebase Auth)&#xa;- Validasi lokal &amp; snackbar error" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#303F9F;fillColor=#f3e5f5;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="450" y="250" width="320" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="admReset" value="Lupa kata sandi&#xa;- Kirim email reset via FirebaseAuth" style="parallelogram;whiteSpace=wrap;html=1;strokeColor=#6A1B9A;fillColor=#ede7f6;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="110" y="250" width="240" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="admCredCheck" value="Kredensial valid &amp; email terverifikasi?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#1E88E5;fillColor=#bbdefb;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="480" y="360" width="260" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="admError" value="Login gagal / email belum verifikasi&#xa;- Tampilkan snackbar &amp; hint verifikasi&#xa;- Tetap di form login" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#D32F2F;fillColor=#ffebee;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="-10" y="400" width="260" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="admRoleFetch" value="Ambil profil &amp; role admin&#xa;- Fetch users/&lt;uid&gt;.roles + metadata&#xa;- Aktifkan listener notifikasi per modul&#xa;- Inject gating ke AdminDashboardShell" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#0D47A1;fillColor=#ffffff;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="450" y="500" width="320" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="admRoleCheck" value="Memiliki peran admin / superAdmin?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#00695C;fillColor=#b2dfdb;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="480" y="630" width="260" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="admDenied" value="Akses ditolak&#xa;- Sign out &amp; arahkan hubungi super admin" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#B71C1C;fillColor=#ffebee;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="-40" y="620" width="260" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="admShell" value="Dashboard Shell&#xa;- NavigationRail &amp; layout responsif&#xa;- Welcome overlay, pencarian, quick actions bell&#xa;- Filter modul berdasar role aktif" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#1B5E20;fillColor=#e8f5e9;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="440" y="760" width="320" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="admOverview" value="Overview&#xa;- Ringkasan kehadiran harian &amp; akumulasi 12 bulan&#xa;- Kartu KPI hadir/izin/cuti &amp; highlight request terbaru&#xa;- Toggle diagram batang/pie &amp; cache profil karyawan" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2E7D32;fillColor=#ffffff;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="210" y="920" width="240" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="admAttendance" value="Absensi &amp; Window&#xa;- Stream log per hari dengan pencarian &amp; filter status/tim&#xa;- Detail modal: foto wajah, bukti lokasi, metadata perangkat&#xa;- Kelola jendela absensi (buka/tutup otomatis + auto close timer)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#00796B;fillColor=#ffffff;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="550" y="1060" width="240" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="admRequests" value="Cuti &amp; Izin&#xa;- Kalender fokus (follow today) + tab daftar pending/riwayat&#xa;- Filter status/tanggal dengan cache profil pemohon&#xa;- Approve/reject mencatat admin pemutus &amp; notifikasi" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#1976D2;fillColor=#ffffff;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="840" y="920" width="240" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="admCalendar" value="Kalender Operasional&#xa;- Stream acara lintas bulan &amp; highlight event harian&#xa;- Dialog tambah event (kategori, lokasi, waktu, deskripsi)&#xa;- Aksi cepat: ke hari ini, geser bulan, sinkron ke dashboard" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#5E35B1;fillColor=#ffffff;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="1210" y="910" width="240" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="admDocuments" value="Pemberkasan&#xa;- Unggah file via FilePicker ke Storage&#xa;- Set tanggal kedaluwarsa &amp; interval pengingat otomatis&#xa;- Cari/filter dokumen, share tautan, buka/unduh, hapus" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#6D4C41;fillColor=#ffffff;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="70" y="1160" width="240" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="admMaterial" value="Permintaan Material&#xa;- Ringkasan pending/approved/delivered dengan counter&#xa;- Kartu detail item proyek &amp; timeline persetujuan&#xa;- Approve, tandai delivered, buka/unduh PDF auto-generated" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#F57C00;fillColor=#ffffff;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="350" y="1280" width="240" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="admUsers" value="Manajemen Pengguna&#xa;- Cari &amp; pantau status kelengkapan profil&#xa;- Edit identitas, tim, departemen, role, PIN &amp; kontak&#xa;- Toggle hak akses modul &amp; terapkan real-time" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#C2185B;fillColor=#ffffff;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="760" y="1290" width="240" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="admNotify" value="Notifikasi Real-time&#xa;- Listener attendance/request/dokumen/material sesuai role&#xa;- Overlay panel tandai baca &amp; navigasi modul terkait&#xa;- Dedup event &amp; sinkron status antar sesi admin" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#0288D1;fillColor=#e1f5fe;fontSize=12;" parent="1-admin" vertex="1">
+                    <mxGeometry x="1020" y="1150" width="240" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#1A237E;fontSize=11;" parent="1-admin" source="admStart" target="admInit" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#1A237E;fontSize=11;" parent="1-admin" source="admInit" target="admLogin" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge3" value="Lupa sandi" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#6A1B9A;fontSize=11;" parent="1-admin" source="admLogin" target="admReset" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#283593;fontSize=11;" parent="1-admin" source="admLogin" target="admCredCheck" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge5" value="Tidak" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#D32F2F;fontSize=11;" parent="1-admin" source="admCredCheck" target="admError" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge6" value="Ya" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#1E88E5;fontSize=11;" parent="1-admin" source="admCredCheck" target="admRoleFetch" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge7" value="Perbaiki kredensial" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#D32F2F;fontSize=11;dashed=1;" parent="1-admin" source="admError" target="admLogin" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#00695C;fontSize=11;" parent="1-admin" source="admRoleFetch" target="admRoleCheck" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge9" value="Tidak" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#B71C1C;fontSize=11;" parent="1-admin" source="admRoleCheck" target="admDenied" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge10" value="Ya" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#1B5E20;fontSize=11;" parent="1-admin" source="admRoleCheck" target="admShell" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge11" value="Sign out" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#B71C1C;fontSize=11;dashed=1;" parent="1-admin" source="admDenied" target="admLogin" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge12" value="Email terkirim" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#6A1B9A;fontSize=11;dashed=1;" parent="1-admin" source="admReset" target="admLogin" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#2E7D32;fontSize=11;" parent="1-admin" source="admShell" target="admOverview" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#00796B;fontSize=11;" parent="1-admin" source="admShell" target="admAttendance" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#1976D2;fontSize=11;" parent="1-admin" source="admShell" target="admRequests" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#5E35B1;fontSize=11;" parent="1-admin" source="admShell" target="admCalendar" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#6D4C41;fontSize=11;" parent="1-admin" source="admShell" target="admDocuments" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge18" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#F57C00;fontSize=11;" parent="1-admin" source="admShell" target="admMaterial" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge19" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#C2185B;fontSize=11;" parent="1-admin" source="admShell" target="admUsers" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="admEdge20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;jettySize=auto;orthogonalLoop=1;strokeColor=#0288D1;fontSize=11;" parent="1-admin" source="admShell" target="admNotify" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

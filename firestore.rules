@@ -1,0 +1,679 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Fungsi pembantu untuk memeriksa otentikasi pengguna
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    // Fungsi pembantu untuk mendapatkan UID pengguna yang sedang login
+    function uid() {
+      return request.auth.uid;
+    }
+    // Fungsi pembantu untuk mendapatkan dokumen pengguna yang sedang login
+    function userDoc() {
+      return get(/databases/$(database)/documents/users/$(uid()));
+    }
+    // Fungsi pembantu untuk memeriksa apakah pengguna adalah admin
+    function isAdmin() {
+      return isSignedIn() &&
+        (userDoc().data.roles is map) &&
+        (
+          userDoc().data.roles.superAdmin == true ||
+          userDoc().data.roles.admin == true
+        );
+    }
+    // Fungsi pembantu untuk memeriksa hak akses modul tertentu
+    function hasRole(roleKey) {
+      return isSignedIn() &&
+        (userDoc().data.roles is map) &&
+        (
+          userDoc().data.roles.superAdmin == true ||
+          userDoc().data.roles.admin == true ||
+          userDoc().data.roles[roleKey] == true
+        );
+    }
+    // Fungsi pembantu untuk memeriksa kepemilikan data
+    function isOwner(resourceData) {
+      return resourceData.ownerId == uid();
+    }
+    // Fungsi pembantu untuk memeriksa apakah suatu bidang tidak berubah
+    function unchanged(path) {
+      return request.resource.data[path] == resource.data[path];
+    }
+    // Fungsi pembantu untuk memastikan hanya kunci tertentu yang ada dalam data
+    function onlyKeys(allowedKeys) {
+      return request.resource.data.keys().hasOnly(allowedKeys);
+    }
+    // Fungsi pembantu untuk memeriksa apakah koleksi (list/map) mengandung UID pengguna saat ini
+    function collectionHasCurrentUser(collection) {
+      return (collection is list && collection.hasAny([uid()])) ||
+             (collection is map && collection.keys().hasAny([uid()]));
+    }
+
+    // Fungsi pembantu untuk memeriksa apakah daftar anggota berisi pengguna saat ini
+    function listHasCurrentUser(list) {
+      return collectionHasCurrentUser(list);
+    }
+
+    // Fungsi pembantu untuk memeriksa apakah info anggota berisi pengguna saat ini
+    function memberInfoHasCurrentUser(info) {
+      return collectionHasCurrentUser(info);
+    }
+
+    // Fungsi pembantu untuk mendapatkan data dokumen chat
+    function chatDocData(chatId) {
+      return get(/databases/$(database)/documents/chats/$(chatId)).data;
+    }
+    function chatExistsAfter(chatId) {
+      return existsAfter(/databases/$(database)/documents/chats/$(chatId));
+    }
+    function chatDocDataAfter(chatId) {
+      return chatExistsAfter(chatId)
+        ? getAfter(/databases/$(database)/documents/chats/$(chatId)).data
+        : chatDocData(chatId);
+    }
+
+    // Fungsi pembantu untuk memeriksa apakah pengguna adalah anggota chat
+    function isChatMemberById(chatId) {
+      return isSignedIn() && (
+        isAdmin() ||
+        (
+          (chatExistsAfter(chatId) || exists(/databases/$(database)/documents/chats/$(chatId))) &&
+          (
+            listHasCurrentUser(chatDocDataAfter(chatId).members) ||
+            memberInfoHasCurrentUser(chatDocDataAfter(chatId).memberInfo)
+          )
+        )
+      );
+    }
+
+    // Aturan untuk koleksi 'users'
+    match /users/{userId} {
+      function publicUserKeys(data) {
+        return data.keys().hasOnly([
+          'name','displayName','fullName','username',
+          'about','bio','description',
+          'role','team','department','division',
+          'photoUrl','photoURL','avatarUrl','profilePhoto',
+          'email','phone',
+          'pin','chatPin','userPin','PIN','pinAssignedAt','pinUpper',
+          'profileCompleted','isComplete',
+          'companyId','roles',
+          'pinnedChats','hiddenChats',
+          'updatedAt','createdAt',
+          'searchKeywords','online','lastSeen'
+        ]);
+      }
+
+      allow get, list: if isSignedIn();
+      allow create: if isSignedIn() && (userId == uid() || isAdmin());
+
+      function userAllowedKeys() {
+        return request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'name','displayName','fullName','username',
+          'about','bio','description',
+          'role','team','department','division',
+          'photoUrl','photoURL','avatarUrl','profilePhoto',
+          'email','phone',
+          'pin','chatPin','userPin','PIN','pinAssignedAt','pinUpper',
+          'profileCompleted','isComplete',
+          'companyId','roles',
+          'pinnedChats','hiddenChats',
+          'updatedAt','createdAt',
+          'searchKeywords','online','lastSeen'
+        ]);
+      }
+
+      allow update: if isSignedIn() && userId == uid();
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+
+      match /contacts/{contactId} {
+        allow read, write: if isSignedIn() && userId == uid();
+      }
+
+      match /attendance/{attendanceId} {
+        function attendanceAllowedKeys() {
+          return request.resource.data.keys().hasAll(['uid']) && 
+                 request.resource.data.keys().hasOnly([
+            'uid','userUid','userId','userName','userEmail',
+            'type','status','statusLabel','manualByAdmin',
+            'date','createdAt','time','serverTime','source',
+            'latitude','longitude','locationPhotoUrl','locationPhotoStoragePath',
+            'faceRecognitionPath','faceRecognitionUrl','facePhotoUrl','facePhotoStoragePath',
+            'backPhotoPath','backPhotoUrl','project','note',
+            'userAttendancePath','adminStatus','attendanceStatus','checkInStatus'
+          ]);
+        }
+
+        allow read: if isSignedIn() && (userId == uid() || hasRole('attendance') || isAdmin());
+        allow create: if isSignedIn() && (isAdmin() || ((userId == uid() || hasRole('attendance')) && attendanceAllowedKeys()));
+        allow update, delete: if hasRole('attendance') || isAdmin();
+      }
+
+      match /absen/{absenId} {
+        allow read: if isSignedIn() && (userId == uid() || hasRole('attendance') || isAdmin());
+        allow create: if isSignedIn() && (isAdmin() || (userId == uid() || hasRole('attendance')));
+        allow update, delete: if hasRole('attendance') || isAdmin();
+      }
+    }
+
+    match /attendance_feed/{attendanceId} {
+      function attendanceFeedAllowedKeys() {
+        return request.resource.data.keys().hasOnly([
+          'uid','userUid','userName','userEmail',
+          'type','status','note','project','source',
+          'date','createdAt','time',
+          'latitude','longitude',
+          'faceRecognitionPath','faceRecognitionUrl',
+          'facePhotoUrl','facePhotoStoragePath',
+          'backPhotoPath','backPhotoUrl',
+          'locationPhotoUrl','locationPhotoStoragePath',
+          'userAttendancePath'
+        ]);
+      }
+
+      allow read: if isSignedIn() && (hasRole('attendance') || isAdmin());
+      
+      allow create: if isSignedIn() && (
+        isAdmin() ||
+        (
+          attendanceFeedAllowedKeys() &&
+          request.resource.data.uid == uid() &&
+          request.resource.data.type in ['checkin','checkout'] &&
+          request.resource.data.status is string &&
+          request.resource.data.date is timestamp &&
+          request.resource.data.createdAt is timestamp &&
+          request.resource.data.time is number &&
+          request.resource.data.latitude is number &&
+          request.resource.data.longitude is number
+        )
+      );
+
+      allow update, delete: if hasRole('attendance') || isAdmin();
+    }
+
+    match /attendance_windows/{dateId} {
+      function attendanceWindowAllowedKeys() {
+        return onlyKeys([
+          'openAt',
+          'closeAt',
+          'lateGraceMinutes',
+          'updatedAt',
+        ]);
+      }
+
+      allow read: if isSignedIn();
+
+      allow create, update: if isAdmin() &&
+        attendanceWindowAllowedKeys() &&
+        request.resource.data.openAt is timestamp &&
+        request.resource.data.closeAt is timestamp &&
+        request.resource.data.lateGraceMinutes is number;
+
+      allow delete: if isAdmin();
+    }
+
+    match /leave_requests/{requestId} {
+      function leaveRequestAllowedKeys() {
+        return onlyKeys([
+          'uid','kind','reason',
+          'startAt','endAt',
+          'status',
+          'createdAt','updatedAt',
+          'decisionAt','decisionBy','decisionByEmail','decisionByName','decisionNote',
+          'requesterName','requesterEmail','approverName',
+          'requestDate','startTimeText','endTimeText',
+          'startMinutes','endMinutes',
+          'startDateText','endDateText',
+          'daySpan',
+          'attachments',
+        ]);
+      }
+
+      allow read: if isSignedIn() && (resource.data.uid == uid() || hasRole('requests') || isAdmin());
+
+      allow create: if isSignedIn() &&
+        leaveRequestAllowedKeys() &&
+        request.resource.data.uid == uid() &&
+        request.resource.data.kind in ['cuti', 'izin'] &&
+        request.resource.data.status == 'pending' &&
+        request.resource.data.startAt is timestamp &&
+        request.resource.data.endAt is timestamp &&
+        request.resource.data.reason is string &&
+        (
+          !('attachments' in request.resource.data) ||
+          request.resource.data.attachments is list
+        );
+
+      allow update, delete: if hasRole('requests');
+    }
+
+    // Aturan untuk koleksi 'chats'
+    match /chats/{chatId} {
+      function membersForAccess() {
+        return (resource.data != null && resource.data.members is list)
+          ? resource.data.members
+          : request.resource.data.members;
+      }
+
+      allow get: if isSignedIn();
+      allow list: if isSignedIn();
+
+      allow create: if isSignedIn() &&
+        request.resource.data.members is list &&
+        request.resource.data.members.size() > 0 &&
+        (
+          isAdmin() ||
+          listHasCurrentUser(request.resource.data.members) ||
+          (request.resource.data.createdBy == uid())
+        );
+
+      // Izinkan update untuk admin ATAU anggota chat, baik yang terdaftar di 'members' maupun via 'memberInfo'.
+      // Ini penting agar update ringan (mis. set unread) tidak wajib menyertakan field 'members' di request.
+      allow update: if isSignedIn() && (
+        isAdmin() ||
+        resource.data.createdBy == uid() ||
+        listHasCurrentUser(membersForAccess()) ||
+        (uid() in chatId.split('_')) ||
+        (resource.data != null && (
+          listHasCurrentUser(resource.data.admins) ||
+          memberInfoHasCurrentUser(resource.data.memberInfo)
+        ))
+      );
+      // Hapus chat dibatasi hanya admin (selaras dengan UI yang sudah dibatasi untuk admin).
+      allow delete: if isSignedIn() && isAdmin();
+
+      match /messages/{messageId} {
+        allow read: if isChatMemberById(chatId);
+        allow create: if request.resource.data.senderId == uid() &&
+          (isChatMemberById(chatId) ||
+           getAfter(/databases/$(database)/documents/chats/$(chatId)).data.createdBy == uid());
+        allow update, delete: if isChatMemberById(chatId);
+      }
+    }
+
+    // Aturan untuk koleksi 'profiles'
+    match /profiles/{profileId} {
+      allow read: if isSignedIn();
+      allow create, update, delete: if false;
+    }
+
+    // Aturan untuk koleksi 'user_profiles'
+    match /user_profiles/{profileId} {
+      allow read: if isSignedIn();
+      allow create, update, delete: if false;
+    }
+
+    // Aturan untuk koleksi 'members'
+    match /members/{memberId} {
+      allow read: if isSignedIn();
+      allow create, update, delete: if false;
+    }
+
+    // Aturan untuk koleksi 'groups'
+    match /groups/{groupId} {
+      function isGroupMember(groupId) {
+        return exists(/databases/$(database)/documents/groups/$(groupId)/members/$(uid()));
+      }
+
+      allow read: if isSignedIn() && (isGroupMember(groupId) || isAdmin());
+
+      allow create: if isSignedIn() && (
+        isAdmin() ||
+        (request.resource.data.ownerId == uid() &&
+         request.resource.data.name is string &&
+         request.resource.data.name.size() > 0 &&
+         request.resource.data.createdAt == request.time)
+      );
+
+      allow update, delete: if isSignedIn() && (
+        isAdmin() ||
+        (isOwner(resource.data) &&
+         unchanged('ownerId') &&
+         unchanged('createdAt') &&
+         request.resource.data.name is string &&
+         request.resource.data.name.size() > 0)
+      );
+
+      match /members/{memberId} {
+        allow read: if isSignedIn() && (isGroupMember(groupId) || isAdmin());
+        allow create, update, delete: if isSignedIn() && (
+          isAdmin() ||
+          isOwner(get(/databases/$(database)/documents/groups/$(groupId)).data)
+        );
+      }
+
+      match /messages/{msgId} {
+        allow read: if isSignedIn() && (isGroupMember(groupId) || isAdmin());
+
+        allow create: if isSignedIn() && (
+          (isGroupMember(groupId) &&
+           request.resource.data.senderId == uid() &&
+           request.resource.data.text is string &&
+           request.resource.data.text.size() > 0 &&
+           request.resource.data.createdAt == request.time &&
+           onlyKeys(['senderId','text','createdAt','attachments']))
+          ||
+          (isAdmin() &&
+           request.resource.data.senderId is string &&
+           request.resource.data.text is string &&
+           request.resource.data.createdAt == request.time)
+        );
+
+        allow update, delete: if isSignedIn() && (
+          isAdmin() ||
+          (resource.data.senderId == uid() &&
+           request.time < resource.data.createdAt + duration.value(10, 'm'))
+        );
+      }
+    }
+
+    // Aturan untuk koleksi 'pins'
+    match /pins/{pinId} {
+      allow get: if isSignedIn();
+      allow list: if false;
+
+      allow create: if isSignedIn() &&
+        request.resource.data.uid == uid() &&
+        onlyKeys(['uid','createdAt']);
+
+      allow update, delete: if isAdmin();
+    }
+
+    // Aturan untuk koleksi 'attendance' (termasuk collectionGroup)
+    match /{path=**}/attendance/{docId} {
+      allow read: if isSignedIn() && (
+        (resource != null && resource.data.uid == uid()) || 
+        (resource != null && resource.data.userId == uid()) ||
+        isAdmin() || 
+        hasRole('attendance')
+      );
+    }
+
+    // Aturan untuk koleksi 'absen' (termasuk collectionGroup)
+    match /{path=**}/absen/{docId} {
+      allow read: if isSignedIn() && (
+        (resource != null && resource.data.uid == uid()) || 
+        (resource != null && resource.data.userId == uid()) ||
+        isAdmin() || 
+        hasRole('attendance')
+      );
+    }
+
+    match /attendance/{docId} {
+      allow read: if isSignedIn() && (
+        (resource != null && (resource.data.userId == uid() || resource.data.uid == uid())) || 
+        hasRole('attendance') || 
+        isAdmin()
+      );
+      allow create: if isSignedIn() && (
+        (request.resource.data.userId == uid()) ||
+        hasRole('attendance')
+      ) &&
+      request.resource.data.type in ['checkin','checkout'] &&
+      request.resource.data.timestamp == request.time &&
+      request.resource.data.lat is number &&
+      request.resource.data.lng is number &&
+      request.resource.data.photoURL is string &&
+      onlyKeys(['userId','type','timestamp','lat','lng','photoURL','note']);
+
+      allow update, delete: if hasRole('attendance');
+    }
+
+    match /employee_documents/{documentId} {
+      function documentAllowedKeys() {
+        return request.resource.data.keys().hasOnly([
+          'uid',
+          'title',
+          'storagePath',
+          'downloadUrl',
+          'divisions',
+          'createdAt',
+          'updatedAt',
+          'createdBy',
+          'expiresAt',
+          'reminderIntervalDays',
+          'originalFileName',
+          'notes',
+        ]);
+      }
+
+      function optionalTimestamp(field) {
+        return !request.resource.data.keys().hasAny([field]) ||
+          request.resource.data[field] is timestamp;
+      }
+
+      function optionalString(field) {
+        return !request.resource.data.keys().hasAny([field]) ||
+          request.resource.data[field] is string;
+      }
+
+      function optionalNumber(field) {
+        return !request.resource.data.keys().hasAny([field]) ||
+          request.resource.data[field] is number;
+      }
+
+      function optionalList(field) {
+        return !request.resource.data.keys().hasAny([field]) ||
+          request.resource.data[field] is list;
+      }
+
+      allow read: if isSignedIn() &&
+        (hasRole('documents') || resource.data.uid == uid());
+
+      allow create: if isSignedIn() &&
+        documentAllowedKeys() &&
+        request.resource.data.uid is string &&
+        request.resource.data.uid.size() > 0 &&
+        request.resource.data.title is string &&
+        request.resource.data.title.size() > 0 &&
+        request.resource.data.storagePath is string &&
+        request.resource.data.storagePath.size() > 0 &&
+        request.resource.data.downloadUrl is string &&
+        request.resource.data.downloadUrl.size() > 0 &&
+        request.resource.data.createdAt is timestamp &&
+        request.resource.data.updatedAt is timestamp &&
+        optionalString('createdBy') &&
+        optionalTimestamp('expiresAt') &&
+        optionalNumber('reminderIntervalDays') &&
+        optionalString('originalFileName') &&
+        optionalString('notes') &&
+        optionalList('divisions') &&
+        (
+          request.resource.data.uid == uid() ||
+          hasRole('documents')
+        );
+
+      allow update: if isSignedIn() && (
+        hasRole('documents') ||
+        (
+          resource.data.uid == uid() &&
+          documentAllowedKeys() &&
+          request.resource.data.uid == resource.data.uid &&
+          request.resource.data.createdAt == resource.data.createdAt &&
+          request.resource.data.updatedAt is timestamp &&
+          optionalString('createdBy') &&
+          optionalTimestamp('expiresAt') &&
+          optionalNumber('reminderIntervalDays') &&
+          optionalString('originalFileName') &&
+          optionalString('notes') &&
+          optionalList('divisions')
+        )
+      );
+
+      allow delete: if isSignedIn() &&
+        (hasRole('documents') || resource.data.uid == uid());
+    }
+
+    match /material_requests/{requestId} {
+      function requesterUpdateAllowed() {
+        return request.resource.data.diff(resource.data).addedKeys().size() == 0 &&
+          request.resource.data.diff(resource.data).removedKeys().size() == 0 &&
+          request.resource.data.diff(resource.data).changedKeys().hasOnly([
+            'status',
+            'receivedBy',
+            'receivedByUid',
+            'receivedAt',
+            'updatedAt',
+          ]) &&
+          resource.data.status in ['approved', 'delivered'] &&
+          request.resource.data.status == 'delivered' &&
+          request.resource.data.receivedAt is timestamp &&
+          request.resource.data.updatedAt is timestamp &&
+          (!request.resource.data.keys().hasAny(['receivedBy']) ||
+            request.resource.data.receivedBy is string) &&
+          (!request.resource.data.keys().hasAny(['receivedByUid']) ||
+            request.resource.data.receivedByUid is string) &&
+          request.resource.data.requesterUid == resource.data.requesterUid;
+      }
+
+      function requesterAttachDocsAllowed() {
+        return resource.data.requesterUid == uid() &&
+          resource.data.status == 'pending' &&
+          request.resource.data.status == resource.data.status &&
+          request.resource.data.requesterUid == resource.data.requesterUid &&
+          request.resource.data.createdAt == resource.data.createdAt &&
+          request.resource.data.companyName == resource.data.companyName &&
+          request.resource.data.projectName == resource.data.projectName &&
+          request.resource.data.requesterName == resource.data.requesterName &&
+          request.resource.data.requestDate == resource.data.requestDate &&
+          request.resource.data.items == resource.data.items &&
+          request.resource.data.approverName == resource.data.approverName &&
+          request.resource.data.approvedBy == resource.data.approvedBy &&
+          request.resource.data.approvedByUid == resource.data.approvedByUid &&
+          request.resource.data.approvedAt == resource.data.approvedAt &&
+          request.resource.data.receivedBy == resource.data.receivedBy &&
+          request.resource.data.receivedByUid == resource.data.receivedByUid &&
+          request.resource.data.receivedAt == resource.data.receivedAt &&
+          request.resource.data.diff(resource.data).removedKeys().size() == 0 &&
+          request.resource.data.diff(resource.data).addedKeys().hasOnly([
+            'documentUrl',
+            'documentStoragePath',
+            'pdfUrl',
+            'pdfStoragePath',
+          ]) &&
+          request.resource.data.diff(resource.data).changedKeys().hasOnly([
+            'updatedAt',
+          ]) &&
+          request.resource.data.documentUrl is string &&
+          request.resource.data.documentUrl.size() > 0 &&
+          request.resource.data.documentStoragePath is string &&
+          request.resource.data.documentStoragePath.size() > 0 &&
+          request.resource.data.pdfUrl is string &&
+          request.resource.data.pdfUrl.size() > 0 &&
+          request.resource.data.pdfStoragePath is string &&
+          request.resource.data.pdfStoragePath.size() > 0 &&
+          request.resource.data.updatedAt is timestamp;
+      }
+
+      allow create: if isSignedIn() &&
+        request.resource.data.requesterUid == uid() &&
+        request.resource.data.requesterUid is string;
+
+      allow get: if hasRole('material') ||
+        (isSignedIn() && resource.data.requesterUid == uid());
+
+      allow list: if isAdmin() || isSignedIn();
+
+      allow update: if hasRole('material') ||
+        (isSignedIn() &&
+          resource.data.requesterUid == uid() &&
+          (requesterUpdateAllowed() || requesterAttachDocsAllowed()));
+
+      allow delete: if hasRole('material');
+    }
+
+    match /calendar_events/{eventId} {
+      function calendarEventAllowedKeys() {
+        return request.resource.data.keys().hasOnly([
+          'title',
+          'date',
+          'category',
+          'description',
+          'location',
+          'time',
+          'createdBy',
+          'divisions',
+          'createdAt',
+          'updatedAt',
+        ]);
+      }
+
+      function calendarEventBaseChecks() {
+        return calendarEventAllowedKeys() &&
+          request.resource.data.title is string &&
+          request.resource.data.title.size() > 0 &&
+          request.resource.data.date is timestamp &&
+          (!request.resource.data.keys().hasAny(['createdAt']) ||
+            request.resource.data.createdAt is timestamp) &&
+          (!request.resource.data.keys().hasAny(['updatedAt']) ||
+            request.resource.data.updatedAt is timestamp);
+      }
+
+      allow get, list: if isSignedIn();
+
+      allow create: if (
+        hasRole('calendar') &&
+        calendarEventBaseChecks()
+      ) || (
+        isSignedIn() &&
+        calendarEventBaseChecks() &&
+        request.resource.data.createdBy is string &&
+        request.resource.data.createdBy == uid()
+      );
+
+      allow update: if hasRole('calendar') &&
+        calendarEventBaseChecks() &&
+        request.resource.data.createdBy == resource.data.createdBy &&
+        (!request.resource.data.keys().hasAny(['createdAt']) ||
+          resource.data.createdAt == request.resource.data.createdAt);
+
+      allow delete: if hasRole('calendar');
+    }
+
+    match /admin_signals/{signalId} {
+      function adminSignalAllowedKeys() {
+        return request.resource.data.keys().hasOnly([
+          'type',
+          'adminUid',
+          'adminEmail',
+          'createdAt',
+          'issuedAt',
+        ]);
+      }
+
+      allow get, list: if isAdmin();
+      allow create: if isAdmin() &&
+        adminSignalAllowedKeys() &&
+        request.resource.data.type is string &&
+        request.resource.data.type.size() > 0 &&
+        (!request.resource.data.keys().hasAny(['adminUid']) ||
+          request.resource.data.adminUid is string) &&
+        (!request.resource.data.keys().hasAny(['adminEmail']) ||
+          request.resource.data.adminEmail is string) &&
+        (!request.resource.data.keys().hasAny(['createdAt']) ||
+          request.resource.data.createdAt is timestamp) &&
+        (!request.resource.data.keys().hasAny(['issuedAt']) ||
+          request.resource.data.issuedAt is timestamp);
+      allow update, delete: if false;
+    }
+
+    // Aturan default untuk semua dokumen lain (deny all)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Konten publik Company Profile & marketing
+    match /company_landing_content/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /company_profiles/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+  }
+}

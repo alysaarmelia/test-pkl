@@ -1,0 +1,70 @@
+name: Build APK
+
+# Manual: Actions -> Build APK -> Run workflow, atau otomatis saat push ke main.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "tests_ci/**"
+      - "tools_ci/templat/**"
+      - "**.md"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-apk-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FLUTTER_VERSION: "3.35.7"
+
+jobs:
+  build:
+    name: flutter build apk --release
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          channel: stable
+          cache: true
+
+      - name: Siapkan berkas rahasia dari GitHub Secrets (fallback palsu bila kosong)
+        env:
+          ENV_FILE_B64: ${{ secrets.ENV_FILE_B64 }}
+          GOOGLE_SERVICES_JSON_B64: ${{ secrets.GOOGLE_SERVICES_JSON_B64 }}
+          FIREBASE_OPTIONS_DART_B64: ${{ secrets.FIREBASE_OPTIONS_DART_B64 }}
+        run: bash tools_ci/siapkan_rahasia.sh asli
+
+      - name: flutter pub get
+        run: flutter pub get
+
+      - name: Build APK release (ditandatangani kunci debug bila key.properties tidak ada)
+        run: flutter build apk --release
+
+      - name: Ganti nama APK
+        run: |
+          mkdir -p dist
+          cp build/app/outputs/flutter-apk/app-release.apk "dist/cvm-digital-${GITHUB_SHA::7}.apk"
+          ls -lh dist
+
+      - name: Unggah APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: apk-release
+          path: dist/*.apk
+          retention-days: 30
+
+      - name: Hapus berkas rahasia dari runner
+        if: always()
+        run: rm -f .env android/app/google-services.json lib/firebase_options.dart
