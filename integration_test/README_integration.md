@@ -121,12 +121,12 @@ bash integration_test/ci/prepare_ci.sh
 flutter pub get
 firebase emulators:exec \
   --project demo-cvm \
-  --config integration_test/firebase.integration.json \
+  --config firebase.integration.json \
   --only auth,firestore,storage \
   "flutter test integration_test --machine"
 ```
 
-`integration_test/firebase.integration.json` memuat emulator `auth:9099`,
+`firebase.integration.json` memuat emulator `auth:9099`,
 `firestore:8080`, `storage:9199` dan menunjuk ke `firestore.rules` serta
 `storage.rules` milik repo. Aplikasi di emulator Android mengakses emulator
 Firebase lewat `10.0.2.2`. Ganti dengan

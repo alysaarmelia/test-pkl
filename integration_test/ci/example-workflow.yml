@@ -56,7 +56,7 @@ jobs:
           script: >
             firebase emulators:exec
             --project demo-cvm
-            --config integration_test/firebase.integration.json
+            --config firebase.integration.json
             --only auth,firestore,storage
             "flutter test integration_test --machine > integration_result.jsonl"
 
