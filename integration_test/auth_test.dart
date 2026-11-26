@@ -112,7 +112,9 @@ void main() {
 
     expect(FirebaseAuth.instance.currentUser, isNull,
         reason: 'Tidak boleh ada akun yang dibuat');
-    expect(await Emu.oobCodes(), isEmpty);
+    // Emulator Auth dipakai bersama oleh semua tes: periksa hanya email tes ini.
+    expect(await Emu.hasOobCode('siti@demo-cvm.test', 'VERIFY_EMAIL'), isFalse,
+        reason: 'Tidak boleh ada email verifikasi untuk isian yang ditolak');
   });
 
   // ---------------------------------------------------------------- UC-02
