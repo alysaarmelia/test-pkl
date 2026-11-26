@@ -158,7 +158,12 @@ def pisahkan(flutter, junit):
         ids = {i.upper() for i in BB_RE.findall(t["nama"] + " " + t.get("kelas", ""))}
         if ids:
             for i in ids:
-                black[i].append((t["hasil"], t["galat"]))
+                # Pesan untuk kolom Hasil Aktual: nama skenario yang gagal (lebih mudah dibaca
+                # daripada pesan galat mentah), lalu galat singkat.
+                nama = BB_RE.sub("", t["nama"]).strip(" |:-")
+                sisi = "server" if t["sumber"].endswith(".xml") else "UI"
+                pesan = f'[{sisi}] {nama}' + (f' ({t["galat"][:100]})' if t["galat"] else "")
+                black[i].append((t["hasil"], pesan))
         elif t["sumber"].endswith(".jsonl") and t["berkas"].startswith("test/"):
             white.append(t)
         else:
