@@ -175,7 +175,7 @@ jobs:
           path: |
             ~/.android/avd/*
             ~/.android/adb*
-          key: avd-api34-x86_64-v1
+          key: avd-api34-x86_64-pixel6-v2
 
       - name: Buat snapshot AVD (hanya bila cache kosong)
         if: steps.avd-cache.outputs.cache-hit != 'true'
@@ -185,6 +185,10 @@ jobs:
           arch: x86_64
           target: google_apis
           force-avd-creation: false
+          profile: pixel_6          # layar ponsel umum (1080x2400)
+          ram-size: 4096M
+          heap-size: 576M
+          disk-size: 6000M
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: false
           script: echo "Snapshot AVD dibuat"
@@ -196,6 +200,10 @@ jobs:
           arch: x86_64
           target: google_apis
           force-avd-creation: false
+          profile: pixel_6          # layar ponsel umum (1080x2400)
+          ram-size: 4096M
+          heap-size: 576M
+          disk-size: 6000M
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
           script: bash tools_ci/jalankan_integration.sh

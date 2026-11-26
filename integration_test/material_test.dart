@@ -70,9 +70,13 @@ void main() {
   }
 
   /// Tunggu nama pengorder (otomatis dari profil) terisi di formulir.
-  Future<void> waitRequesterName(WidgetTester tester, String name) =>
-      pumpUntil(tester, find.text(name),
-          reason: 'Nama pengorder tidak terisi otomatis');
+  Future<void> waitRequesterName(WidgetTester tester, String name) async {
+    // Kolom berada di bagian bawah ListView (dibangun malas): gulirkan dulu.
+    await pumpFor(tester, const Duration(seconds: 1));
+    await reveal(tester, byHint('Tuliskan nama pengorder lapangan'));
+    await pumpUntil(tester, find.text(name),
+        reason: 'Nama pengorder tidak terisi otomatis');
+  }
 
   Future<void> openMaterialForm(WidgetTester tester, TestAccount acc) async {
     await pumpApp(

@@ -171,12 +171,23 @@ Future<void> pumpFor(WidgetTester tester, Duration duration) async {
 /// Gulirkan [finder] ke area terlihat bila berada di dalam Scrollable.
 Future<void> reveal(WidgetTester tester, Finder finder) async {
   if (finder.evaluate().isEmpty) {
-    await tester.scrollUntilVisible(
-      finder,
-      250,
-      scrollable: find.byType(Scrollable).first,
-      maxScrolls: 40,
-    );
+    // ListView membangun anak secara malas: coba gulir ke bawah dulu,
+    // bila tidak ketemu gulir ke atas.
+    try {
+      await tester.scrollUntilVisible(
+        finder,
+        250,
+        scrollable: find.byType(Scrollable).first,
+        maxScrolls: 40,
+      );
+    } catch (_) {
+      await tester.scrollUntilVisible(
+        finder,
+        -250,
+        scrollable: find.byType(Scrollable).first,
+        maxScrolls: 60,
+      );
+    }
   } else {
     await tester.ensureVisible(finder);
   }

@@ -7,6 +7,10 @@ on:
     branches: [main]
     paths-ignore:
       - "tests_ci/**"
+      - "integration_test/**"
+      - "tools_ci/**"
+      - "firebase.integration.json"
+      - ".github/workflows/pengujian-otomatis.yml"
       - "tools_ci/templat/**"
       - "**.md"
 
